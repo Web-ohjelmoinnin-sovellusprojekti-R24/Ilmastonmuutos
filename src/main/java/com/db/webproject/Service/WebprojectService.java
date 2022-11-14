@@ -1,30 +1,27 @@
 package com.db.webproject.Service;
 
-import java.util.Optional;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
-import com.db.webproject.Data.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.db.webproject.Data.UserRepository;
+import com.db.webproject.Data.V1;
+import com.db.webproject.Data.V1Repository;
+
 
 @Service
 public class WebprojectService {
     @Autowired
-    UserRepository userRepository;
+    V1Repository v1Repository;
 
-    public String getuserid(Integer userid){
-        Optional<User> opt = userRepository.findById(userid);
-
-        if(opt.isPresent()){
-        User u = opt.get();
-        return u.getUsername();
-        }   
-        else 
-        return "xd";
+    public List getAllDates(){
+        return v1Repository.getAllDates();
     }
 
-    public String getusername(String username){
-        return userRepository.findByUsername(username);
+    public LinkedList getAllData(){
+        //return v1Repository.findAll();
+        return v1Repository.getAllData();
     }
 }
