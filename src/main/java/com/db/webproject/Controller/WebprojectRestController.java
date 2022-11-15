@@ -18,15 +18,10 @@ public class WebprojectRestController {
     
     @Autowired
     WebprojectService webprojectService;  
-    
-    @GetMapping("getalldates")
-    public List getalldates(){
-        return webprojectService.getAllDates();
-    }
 
     @GetMapping("getalldata")
     public List<V1> getalldata(){
         return webprojectService.getAllData();
     }
-    
+
 }

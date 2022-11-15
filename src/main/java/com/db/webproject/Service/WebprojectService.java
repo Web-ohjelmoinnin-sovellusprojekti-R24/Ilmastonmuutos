@@ -16,10 +16,6 @@ public class WebprojectService {
     @Autowired
     V1Repository v1Repository;
 
-    public List getAllDates(){
-        return v1Repository.getAllDates();
-    }
-
     public List<V1> getAllData(){
         return v1Repository.findAll();    
 
