@@ -20,8 +20,8 @@ public class WebprojectService {
         return v1Repository.getAllDates();
     }
 
-    public LinkedList getAllData(){
-        //return v1Repository.findAll();
-        return v1Repository.getAllData();
+    public List<V1> getAllData(){
+        return v1Repository.findAll();    
+
     }
 }
