@@ -1,0 +1,7 @@
+.navbar{
+    display: flex;
+    background-color: #b6b6fd;
+}
+.navbar > * {
+    margin-right: 20px;
+}
