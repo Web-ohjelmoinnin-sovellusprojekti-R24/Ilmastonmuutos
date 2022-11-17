@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.db.webproject.Data.Users;
+import com.db.webproject.Data.Visualizations;
 import com.db.webproject.Service.UserViewsService;
 import com.db.webproject.Service.UsersService;
 import com.db.webproject.Service.WebprojectService;
@@ -25,7 +26,7 @@ public class WebprojectRestController {
     UserViewsService UserViewservice;
 
     @GetMapping("getalldata")
-    public List<String> getalldata(){
+    public List<Visualizations> getalldata(){
         return webprojectService.getAllData();
     }
 

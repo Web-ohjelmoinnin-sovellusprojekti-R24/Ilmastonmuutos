@@ -17,8 +17,8 @@ public class Users {
     public Users() {
     }
 
-    public Users(int UserID, String Username, String Password) {
-        this.UserID = UserID;
+    public Users(String Username, String Password) {
+        //this.UserID = UserID;
         this.Username = Username;
         this.Password = Password;
     }
