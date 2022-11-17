@@ -1,5 +1,6 @@
 package com.db.webproject.Controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +27,12 @@ public class WebprojectRestController {
     UserViewsService UserViewservice;
 
     @GetMapping("getalldata")
-    public List<Visualizations> getalldata(){
+    public List<String> getalldata(){
         return webprojectService.getAllData();
     }
 
     @GetMapping("getnortherndata")
-    public List<Double> getnortherndata(){
+    public List<BigDecimal> getnortherndata(){
         return webprojectService.getNorthernData();
     }
 

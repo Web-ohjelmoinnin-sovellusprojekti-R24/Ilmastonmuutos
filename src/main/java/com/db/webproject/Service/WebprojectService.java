@@ -1,5 +1,6 @@
 package com.db.webproject.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,12 @@ public class WebprojectService {
     @Autowired
     V1Repository v1Repository;
 
-    public List<Visualizations> getAllData(){
-        return v1Repository.findAll();    
+    public List<String> getAllData(){
+        return v1Repository.getAllData();    
 
     }
 
-    public List<Double> getNorthernData(){
+    public List<BigDecimal> getNorthernData(){
         return v1Repository.getNothernData();
     }
 }

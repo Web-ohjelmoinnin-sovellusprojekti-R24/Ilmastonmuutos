@@ -6,9 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.db.webproject.Data.Users;
-import com.db.webproject.Data.UsersRepository;
-
 @SpringBootApplication
 public class WebprojectApplication {
 
