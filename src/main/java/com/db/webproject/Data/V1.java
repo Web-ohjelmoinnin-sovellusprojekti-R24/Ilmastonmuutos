@@ -2,9 +2,12 @@ package com.db.webproject.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="visualizations")
 public class V1 {
+    
     
     @Id
     private Integer Id;
