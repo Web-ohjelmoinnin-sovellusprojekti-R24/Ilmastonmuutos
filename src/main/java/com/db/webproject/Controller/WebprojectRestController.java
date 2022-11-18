@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +15,7 @@ import com.db.webproject.Service.UsersService;
 import com.db.webproject.Service.WebprojectService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class WebprojectRestController {
     
     @Autowired
@@ -27,7 +28,7 @@ public class WebprojectRestController {
     UserViewsService UserViewservice;
 
     @GetMapping("getalldata")
-    public List<String> getalldata(){
+    public List<Visualizations> getalldata(){
         return webprojectService.getAllData();
     }
 

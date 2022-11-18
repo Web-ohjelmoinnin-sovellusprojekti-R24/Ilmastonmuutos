@@ -15,8 +15,8 @@ public class WebprojectService {
     @Autowired
     V1Repository v1Repository;
 
-    public List<String> getAllData(){
-        return v1Repository.getAllData();    
+    public List<Visualizations> getAllData(){
+        return v1Repository.findAll();    
 
     }
 
