@@ -6,11 +6,13 @@ import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from "chart.js/auto";
 
 import 'chartjs-adapter-date-fns';
-import { Chart } from 'chart.js';
+import { CategoryScale, LinearScale, PointElement, LineElement, Title } from 'chart.js';
+
 
 
 
 export default function V1() {
+
     //set time data
     const URL = "http://127.0.0.1:8080/getalldata"
     
@@ -26,41 +28,37 @@ export default function V1() {
             }).catch(error => {
                 alert(error)
             })
-        
+
     }, [])
-
-
+    
     //chart data
-    const [chartData, setChartData] = useState({
-        labels: data,
+    const chartData = {
+        labels: data && data.map(d => d.date),
         datasets: [
             {
-                label: "Anomaly_deg_C_Global_NH_SH_2_Monthly",
-                data: data,
-                //globalmonthly.map(d => d.amount),
+                label: "globald",
+                data: data && data.map(d => d.globald),
                 backgroundColor: 'red', 
                 borderColor: 'red',
                 borderWidth: 1
             },
-            /*{
-                label: "Anomaly_deg_C_Northern_hemisphere",
-                data: data,
-                //globalmonthly.map(d => d.amount),
+            {
+                label: "northernd",
+                data: data && data.map(d => d.northernd),
                 backgroundColor: 'blue',
                 borderColor: 'blue',
                 borderWidth: 1
             },
             {
-                label: "Anomaly_deg_C_Southern_hemisphere",
-                data: data,
-                //globalmonthly.map(d => d.amount),
+                label: "southernd",
+                data: data && data.map(d => d.southernd),
                 backgroundColor: 'green',
                 borderColor: 'green',
                 borderWidth: 1
-            }*/
+            }
         ]
-    });
-
+    };
+    
     //options
     const options = {
         responsive: true,
@@ -70,7 +68,7 @@ export default function V1() {
                 text: 'Temperature anomalies form 1850'
             }
         },
-        scales: {
+            scales: {
             x: {
                 type: 'time',
                 time: {
@@ -85,15 +83,15 @@ export default function V1() {
                 },
             }
         },
-
     }
+    
     return (
         <div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
                 <Line data={chartData} options={options} width="500px" height="auto" />
             </div>
             <div>
-                <p>{data}</p>
+                
             </div>
         </div>
     )
