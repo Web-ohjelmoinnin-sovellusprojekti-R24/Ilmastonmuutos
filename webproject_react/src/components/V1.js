@@ -11,14 +11,14 @@ import { Chart } from 'chart.js';
 
 
 export default function V1() {
+
     //set time data
     const URL = "http://127.0.0.1:8080/getalldata"
-    
+
     const [data, setData] = useState();
     useEffect(() => {
-        const address = URL;
+        const address = URL
         console.log(address);
-
         axios.get(address)
             .then((response) => {
                 console.log(response.data);
@@ -26,44 +26,42 @@ export default function V1() {
             }).catch(error => {
                 alert(error)
             })
-        
+
     }, [])
 
-
     //chart data
-    const [chartData, setChartData] = useState({
-        labels: data,
+    const chartData = {
+        labels: data && data.map(d => d.date),
         datasets: [
             {
-                label: "Anomaly_deg_C_Global_NH_SH_2_Monthly",
-                data: data,
-                //globalmonthly.map(d => d.amount),
-                backgroundColor: 'red', 
+                label: "globald",
+                data: data && data.map(d => d.globald),
+                backgroundColor: 'red',
                 borderColor: 'red',
-                borderWidth: 1
-            },
-            /*{
-                label: "Anomaly_deg_C_Northern_hemisphere",
-                data: data,
-                //globalmonthly.map(d => d.amount),
-                backgroundColor: 'blue',
-                borderColor: 'blue',
-                borderWidth: 1
+                borderWidth: 1,
+                pointRadius: 0
             },
             {
-                label: "Anomaly_deg_C_Southern_hemisphere",
-                data: data,
-                //globalmonthly.map(d => d.amount),
+                label: "northernd",
+                data: data && data.map(d => d.northernd),
+                backgroundColor: 'blue',
+                borderColor: 'blue',
+                borderWidth: 1,
+                pointRadius: 0
+            },
+            {
+                label: "southernd",
+                data: data && data.map(d => d.southernd),
                 backgroundColor: 'green',
                 borderColor: 'green',
-                borderWidth: 1
-            }*/
+                borderWidth: 1,
+                pointRadius: 0
+            }
         ]
-    });
+    };
 
     //options
     const options = {
-        responsive: true,
         plugins: {
             title: {
                 display: true,
@@ -84,16 +82,13 @@ export default function V1() {
                     stepSize: 0.5
                 },
             }
-        },
-
+        }
     }
+
     return (
-        <div> 
+        <div>
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-                <Line data={chartData} options={options} width="500px" height="auto" />
-            </div>
-            <div>
-                <p>{data}</p>
+                <Line options={options} data={chartData} width="500px" height="auto" />
             </div>
         </div>
     )
