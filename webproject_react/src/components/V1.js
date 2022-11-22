@@ -72,7 +72,7 @@ export default function V1() {
             x: {
                 type: 'time',
                 time: {
-                    unit: 'month'
+                    unit: 'year'
                 }
             },
             y: {
