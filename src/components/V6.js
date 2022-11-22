@@ -11,10 +11,10 @@ import { CategoryScale, LinearScale, PointElement, LineElement, Title } from 'ch
 
 
 
-export default function V1() {
+export default function V6() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getalldata"
+    const URL = "http://127.0.0.1:8080/v6data"
     
     const [data, setData] = useState();
     useEffect(() => {
@@ -36,7 +36,7 @@ export default function V1() {
         labels: data && data.map(d => d.date),
         datasets: [
             {
-                label: "globald",
+                label: "year",
                 data: data && data.map(d => d.globald),
                 backgroundColor: 'red', 
                 borderColor: 'red',
@@ -44,21 +44,13 @@ export default function V1() {
                 pointRadius: 0
             },
             {
-                label: "northernd",
+                label: "co2",
                 data: data && data.map(d => d.northernd),
                 backgroundColor: 'blue',
                 borderColor: 'blue',
                 borderWidth: 1,
                 pointRadius: 0
             },
-            {
-                label: "southernd",
-                data: data && data.map(d => d.southernd),
-                backgroundColor: 'green',
-                borderColor: 'green',
-                borderWidth: 1,
-                pointRadius: 0
-            }
         ]
     };
     
@@ -91,7 +83,7 @@ export default function V1() {
     return (
         <div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            <Line data={chartData} options={options} width="500px" height="auto" />
+                <Line data={chartData} options={options} width="500px" height="auto" />
             </div>
             <div>
                 
