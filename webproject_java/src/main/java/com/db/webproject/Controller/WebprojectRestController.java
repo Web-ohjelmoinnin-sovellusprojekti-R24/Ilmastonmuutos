@@ -31,11 +31,6 @@ public class WebprojectRestController {
     public List<Visualizations> getalldata(){
         return webprojectService.getAllData();
     }
-    
-    @GetMapping("getalldata2")
-    public List<Visualizations> getalldata2(){
-        return webprojectService.getAllData2();
-    }
 
     @GetMapping("getnortherndata")
     public List<BigDecimal> getnortherndata(){
