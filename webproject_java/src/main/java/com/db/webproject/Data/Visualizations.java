@@ -27,12 +27,16 @@ public class Visualizations {
     private  BigDecimal southernd;
     @Column(name = "globalc")
     private  BigDecimal globalc;
+    @Column(name = "annualavg")
+    private  BigDecimal annualavg;
+    @Column(name = "monthlyavg")
+    private  BigDecimal monthlyavg;
 
 
     public Visualizations() {
     }
 
-    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc) {
+    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg) {
         this.id = id;
         this.date = date;
         this.time_type = time_type;
@@ -40,6 +44,8 @@ public class Visualizations {
         this.northernd = northernd;
         this.southernd = southernd;
         this.globalc = globalc;
+        this.annualavg = annualavg;
+        this.monthlyavg = monthlyavg;
     }
 
     public Integer getId() {
@@ -97,4 +103,21 @@ public class Visualizations {
     public void setGlobalc(BigDecimal globalc) {
         this.globalc = globalc;
     }
+
+    public BigDecimal getAnnualavg() {
+        return this.annualavg;
+    }
+
+    public void setAnnualavg(BigDecimal annualavg) {
+        this.annualavg = annualavg;
+    }
+
+    public BigDecimal getMonthlyavg() {
+        return this.monthlyavg;
+    }
+
+    public void setMonthlyavg(BigDecimal monthlyavg) {
+        this.monthlyavg = monthlyavg;
+    }
+
 }
