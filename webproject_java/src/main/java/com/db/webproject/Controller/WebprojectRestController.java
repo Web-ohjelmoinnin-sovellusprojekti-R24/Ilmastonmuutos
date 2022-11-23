@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.db.webproject.Data.Users;
+import com.db.webproject.Data.V5;
 import com.db.webproject.Data.Visualizations;
 import com.db.webproject.Service.UserViewsService;
 import com.db.webproject.Service.UsersService;
+import com.db.webproject.Service.V5Service;
 import com.db.webproject.Service.WebprojectService;
 
 @RestController
@@ -26,6 +28,9 @@ public class WebprojectRestController {
 
     @Autowired
     UserViewsService UserViewservice;
+
+    @Autowired
+    V5Service v5Service;
 
     @GetMapping("getalldata")
     public List<Visualizations> getalldata(){
@@ -42,5 +47,10 @@ public class WebprojectRestController {
         return UserService.getData();
     }
 
+
+    @GetMapping("v5data")
+    public List<V5> getV5Data(){
+        return v5Service.getCO();
+    }
 
 }
