@@ -4,6 +4,7 @@ import Home from './components/Home';
 import V1 from './components/V1';
 import CreateView from './components/CreateView'
 import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
+import V5 from './components/V5';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Login/>}/>
         <Route path='/views' element={<CreateView/>}/>
         <Route path="/v1" element={<V1/>}/>
+        <Route path="/v5" element={<V5/>}/>
         </Routes>
     </div> 
   );

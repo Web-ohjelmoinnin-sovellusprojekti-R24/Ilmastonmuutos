@@ -1,5 +1,6 @@
 package com.db.webproject.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,8 +11,11 @@ public class V5 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer ID;
+    @Column(name = "co2")
     private double co2;
+    @Column(name = "year")
     private double year;
     
 
