@@ -47,14 +47,18 @@ export default function V5(){
             }
         },
         scales: {
-            x:{
+            x: { 
                 
+                    reverse: true,
+                    min: 2342,
+                    max: 417160,  
             },
             y: {
                 position: "right",
                 grace: '5%',
                 ticks: {
-                    stepSize: 0.5
+                    stepSize: 0.1
+                    
                 },
             }
         }
