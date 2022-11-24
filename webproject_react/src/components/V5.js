@@ -66,6 +66,15 @@ export default function V5(){
             <div style={{display: 'flex', alignItems: 'center',flexWrap: 'wrap' }}>
             <Line options={options} data={chartData} width="500px" height="auto" />
             </div>
+            <div>
+                <a href="https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2">Data used in chart</a>
+            </div>
+            <div>
+                <a href="https://cdiac.ess-dive.lbl.gov/trends/co2/vostok.html">Data description</a>
+            </div>
+            <div>
+                <p>Historical co2 record from the Vostok ice core</p>
+            </div>
         </div>
     )
 
