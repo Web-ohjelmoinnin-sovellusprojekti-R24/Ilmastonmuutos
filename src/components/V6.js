@@ -33,21 +33,13 @@ export default function V6() {
     
     //chart data
     const chartData = {
-        labels: data && data.map(d => d.date),
+        labels: data && data.map(d => d.year),
         datasets: [
             {
-                label: "year",
-                data: data && data.map(d => d.globald),
+                label: "co2",
+                data: data && data.map(d => d.co2),
                 backgroundColor: 'red', 
                 borderColor: 'red',
-                borderWidth: 1,
-                pointRadius: 0
-            },
-            {
-                label: "co2",
-                data: data && data.map(d => d.northernd),
-                backgroundColor: 'blue',
-                borderColor: 'blue',
                 borderWidth: 1,
                 pointRadius: 0
             },
@@ -60,15 +52,15 @@ export default function V6() {
         plugins: {
             title: {
                 display: true,
-                text: 'Temperature anomalies form 1850'
+                text: 'Ice core 800k year composite study CO2 measurements'
             }
         },
             scales: {
             x: {
-                type: 'time',
-                time: {
-                    unit: 'month'
-                }
+                reverse: true,
+                min: -52,
+                max: 805669,
+                
             },
             y: {
                 position: "right",
@@ -83,7 +75,7 @@ export default function V6() {
     return (
         <div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-                <Line data={chartData} options={options} width="500px" height="auto" />
+            <Line data={chartData} options={options} width="500px" height="auto" />
             </div>
             <div>
                 
