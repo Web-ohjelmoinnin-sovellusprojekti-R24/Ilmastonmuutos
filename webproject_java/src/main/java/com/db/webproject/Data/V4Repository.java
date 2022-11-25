@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface V4Repository extends JpaRepository<V4, Integer> {
     @Query(value = "SELECT * FROM v4", nativeQuery = true)
     List<String> getCO();
-    
+   
 }

@@ -13,7 +13,7 @@ function App() {
     <div>
       <div className='navbar'>
         <div>Create new view</div>
-        <div>Logout</div>
+        <Link to="/"><div>Logout</div></Link>
         <div>Temperature data and co2 concentrations</div>
         <div>Emission sources</div>
       </div>

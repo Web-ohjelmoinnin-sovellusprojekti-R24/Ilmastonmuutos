@@ -57,9 +57,10 @@ public class WebprojectRestController {
         return v5Service.getCO();
     }
 
-    @GetMapping("getv5data")
-    public List<V4> getV4Data(){
+    @GetMapping("getv4data")
+    public List<V4> getv4Data(){
         return v4Service.getCO();
-    }
+}
+
 
 }

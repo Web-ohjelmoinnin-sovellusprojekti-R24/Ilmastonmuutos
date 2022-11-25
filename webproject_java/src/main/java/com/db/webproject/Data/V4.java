@@ -1,5 +1,7 @@
 package com.db.webproject.Data;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,10 +15,12 @@ public class V4 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer ID;
-    @Column(name = "code")
-    private char Code;
-    @Column(name = "co2")
-    private double co2;
+    @Column(name ="de08")
+    private BigDecimal de08;
+    @Column(name ="de082")
+    private BigDecimal de082;
+    @Column(name ="dss")
+    private BigDecimal dss;
     @Column(name = "year")
     private double year;
 
@@ -24,10 +28,11 @@ public class V4 {
     public V4() {
     }
 
-    public V4(Integer ID, char Code, double co2, double year) {
+    public V4(Integer ID, BigDecimal de08, BigDecimal de082, BigDecimal dss, double year) {
         this.ID = ID;
-        this.Code = Code;
-        this.co2 = co2;
+        this.de08 = de08;
+        this.de082 = de082;
+        this.dss = dss;
         this.year = year;
     }
 
@@ -39,20 +44,28 @@ public class V4 {
         this.ID = ID;
     }
 
-    public char getCode() {
-        return this.Code;
+    public BigDecimal getDe08() {
+        return this.de08;
     }
 
-    public void setCode(char Code) {
-        this.Code = Code;
+    public void setDe08(BigDecimal de08) {
+        this.de08 = de08;
     }
 
-    public double getCo2() {
-        return this.co2;
+    public BigDecimal getDe082() {
+        return this.de082;
     }
 
-    public void setCo2(double co2) {
-        this.co2 = co2;
+    public void setDe082(BigDecimal de082) {
+        this.de082 = de082;
+    }
+
+    public BigDecimal getDss() {
+        return this.dss;
+    }
+
+    public void setDss(BigDecimal dss) {
+        this.dss = dss;
     }
 
     public double getYear() {
@@ -62,6 +75,8 @@ public class V4 {
     public void setYear(double year) {
         this.year = year;
     }
-
     
 }
+
+
+   

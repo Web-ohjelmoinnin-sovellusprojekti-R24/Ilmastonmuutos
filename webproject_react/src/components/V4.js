@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react"
-import axios from 'axios';
-import 'chartjs-adapter-date-fns';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+
+
 import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS } from "chart.js/auto";
+
+import 'chartjs-adapter-date-fns';
+import { Chart } from 'chart.js';
 
 
 
@@ -27,18 +32,34 @@ export default function V4(){
         labels: data && data.map(d => d.year),
         datasets: [
             {
-                label: "co2",
-                data: data && data.map(d => d.co2),
+                label: "DE08",
+                data: data && data.map(d => d.de08),
                 backgroundColor: 'red',
                 borderColor: 'red',
                 borderWidth: 1,
                 pointRadius: 0
                 
             },
+            {
+                label: "DE08_2",
+                data: data && data.map(d => d.de082),
+                backgroundColor: 'green',
+                borderColor: 'green',
+                borderWidth: 1,
+                pointRadius: 0
+                
+            },
+            {
+                label: "DSS",
+                data: data && data.map(d => d.dss),
+                backgroundColor: 'blue',
+                borderColor: 'blue',
+                borderWidth: 1,
+                pointRadius: 0
+                
+            },
         ]
     };
-
-
 
 
     const options = {
