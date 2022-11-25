@@ -71,7 +71,12 @@ export default function V4(){
         },
         scales: {
             x:{
-                reverse: true,
+                type: 'time',
+                time: {
+                    unit: 'year'
+                    
+                }
+                
             },
             y:{
                 position: "right",
