@@ -57,7 +57,6 @@ export default function V6() {
         },
             scales: {
             x: {
-                reverse: true,
                 min: -52,
                 max: 805669,
                 
