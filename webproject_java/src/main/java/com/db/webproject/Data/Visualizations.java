@@ -25,8 +25,6 @@ public class Visualizations {
     private  BigDecimal northernd;
     @Column(name = "southernd")
     private  BigDecimal southernd;
-<<<<<<< Updated upstream
-=======
     @Column(name = "globalc")
     private  BigDecimal globalc;
     @Column(name = "sector")
@@ -38,30 +36,22 @@ public class Visualizations {
     @Column(name = "sub_sector_percent")
     private  BigDecimal sub_sector_percent;
 
->>>>>>> Stashed changes
 
     public Visualizations() {
     }
 
-<<<<<<< Updated upstream
-    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd) {
-=======
     public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, String sector, String sub_sector, BigDecimal sector_percent, BigDecimal sub_sector_percent) {
->>>>>>> Stashed changes
         this.id = id;
         this.date = date;
         this.time_type = time_type;
         this.globald = globald;
         this.northernd = northernd;
         this.southernd = southernd;
-<<<<<<< Updated upstream
-=======
         this.globalc = globalc;
         this.sector = sector;
         this.sub_sector = sub_sector;
         this.sector_percent = sector_percent;
         this.sub_sector_percent = sub_sector_percent;
->>>>>>> Stashed changes
     }
 
     public Integer getId() {
@@ -113,8 +103,6 @@ public class Visualizations {
     }
 
 
-<<<<<<< Updated upstream
-=======
     public void setGlobalc(BigDecimal globalc) {
         this.globalc = globalc;
     }
@@ -150,7 +138,6 @@ public class Visualizations {
     public void setSub_sector_percent(BigDecimal sub_sector_percent) {
         this.sub_sector_percent = sub_sector_percent;
     }
->>>>>>> Stashed changes
 }
 
 
