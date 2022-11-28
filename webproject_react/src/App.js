@@ -1,7 +1,6 @@
 import './App.css';
 import Login from './components/Login';
 import Home from './components/Home';
-import V1 from './components/V1';
 import CreateView from './components/CreateView'
 import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
 import V5 from './components/V5';
@@ -18,15 +17,14 @@ function App() {
         <div>Create new view</div>
         <Link to="/"><div>Logout</div></Link>
         <div>Temperature data and co2 concentrations</div>
-        <div>Emission sources</div>
-        
-      
-        <V3/>
+        <div>Emission sources</div>  
+ 
       </div>
         <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path='/views' element={<CreateView/>}/>
-        <Route path="/v1" element={<V1/>}/>
+        <Route path="/v1" element={<V1_V2/>}/>
+        <Route path="/v3" element={<V3/>}/>
         <Route path="/v5" element={<V5/>}/>
         <Route path="/v4" element={<V4/>}/>
         <Route path="/v9" element={<V9_try/>}/>
