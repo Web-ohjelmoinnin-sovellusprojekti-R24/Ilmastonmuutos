@@ -7,6 +7,8 @@ import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
 import V5 from './components/V5';
 import V4 from './components/V4';
 import V9_try from './components/v9_try';
+import V1_V2 from './components/V1_V2';
+import V3 from './components/V3';
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
         <div>Temperature data and co2 concentrations</div>
         <div>Emission sources</div>
         
+      
+        <V3/>
       </div>
         <Routes>
         <Route path="/" element={<Login/>}/>
@@ -30,5 +34,6 @@ function App() {
     </div> 
   );
 }
+//    <V1_V2/>
 
 export default App;
