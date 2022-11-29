@@ -28,12 +28,16 @@ const URL = "http://127.0.0.1:8080/v6data"
 
     }, [])
 
+    const sortedData = data && data.sort((a,b) => a.year-b.year)
+    const dataCo2 = sortedData &&  (sortedData.filter((d) => d.co2  !== null));
+    const dataTemp = sortedData &&  (sortedData.filter((d) => d.temp  !== null));
+    
     const chartData = {
-        labels: data && data.map(d => d.year),
+        labels: sortedData && sortedData.map(d => d.year),
         datasets: [
             {
                 label: "co2",
-                data: data && data.map(d => d.co2),
+                data: dataCo2 && dataCo2.map(d => d.co2),
                 backgroundColor: 'blue', 
                 borderColor: 'blue',
                 borderWidth: 1,
@@ -42,7 +46,7 @@ const URL = "http://127.0.0.1:8080/v6data"
             },
             {
                 label: "temp",
-                data: data && data.map(d => d.temp),
+                data: dataTemp && dataTemp.map(d => d.temp),
                 backgroundColor: 'red', 
                 borderColor: 'red',
                 borderWidth: 1,
