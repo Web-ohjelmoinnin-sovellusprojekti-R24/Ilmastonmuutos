@@ -32,6 +32,11 @@ public class WebprojectRestController {
         return webprojectService.getAllData();
     }
 
+    @GetMapping("getv3data")
+    public List<Visualizations> getV3Data(){
+        return webprojectService.getV3Data();
+    }
+
     @GetMapping("getnortherndata")
     public List<BigDecimal> getnortherndata(){
         return webprojectService.getNorthernData();

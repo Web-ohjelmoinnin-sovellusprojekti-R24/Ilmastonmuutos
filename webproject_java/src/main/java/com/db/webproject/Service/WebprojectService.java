@@ -18,6 +18,10 @@ public class WebprojectService {
     public List<Visualizations> getAllData(){
         return v1Repository.getAllData();    
     }
+    
+    public List<Visualizations> getV3Data(){
+        return v1Repository.getV3Data();    
+    }
 
     public List<BigDecimal> getNorthernData(){
         return v1Repository.getNothernData();

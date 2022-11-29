@@ -14,6 +14,9 @@ public interface V1Repository extends JpaRepository<Visualizations, Integer> {
     @Query(value="SELECT * FROM visualizations", nativeQuery = true)
     List<Visualizations> getAllData();
 
+    @Query(value="SELECT * FROM visualizations WHERE time_type = 'V3A' or time_type = 'V3M'", nativeQuery = true)
+    List<Visualizations> getV3Data();
+
     @Query(value="SELECT northernd FROM visualizations", nativeQuery = true)
     List<BigDecimal> getNothernData();
    

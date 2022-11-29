@@ -26,43 +26,58 @@ export default function V1() {
             }).catch(error => {
                 alert(error)
             })
-
     }, [])
 
     //chart data
     const chartData = {
-        labels: data && data.map(d => d.date),
+
         datasets: [
             {
                 label: "2000 year temperatures",
-                data: data && data.map(d => d.globalc),
+                data: data,
                 backgroundColor: 'red',
                 borderColor: 'red',
                 borderWidth: 1,
+                parsing: {
+                    xAxisKey: "date",
+                    yAxisKey: "globalc",
+                  },
                 pointRadius: 0
             },
             {
                 label: "Global ",
-                data: data && data.map(d => d.globald),
+                data: data,
                 backgroundColor: 'yellow',
                 borderColor: 'yellow',
                 borderWidth: 1,
+                parsing: {
+                    xAxisKey: "date",
+                    yAxisKey: "globald",
+                  },
                 pointRadius: 0
             },
             {
                 label: "Northern Hemisphere",
-                data: data && data.map(d => d.northernd),
+                data: data,
                 backgroundColor: 'blue',
                 borderColor: 'blue',
                 borderWidth: 1,
+                parsing: {
+                    xAxisKey: "date",
+                    yAxisKey: "northernd",
+                  },
                 pointRadius: 0
             },
             {
                 label: "Southern Hemisphere",
-                data: data && data.map(d => d.southernd),
+                data: data,
                 backgroundColor: 'green',
                 borderColor: 'green',
                 borderWidth: 1,
+                parsing: {
+                    xAxisKey: "date",
+                    yAxisKey: "southernd",
+                  },
                 pointRadius: 0
             },
 
