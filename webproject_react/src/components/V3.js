@@ -13,7 +13,7 @@ import { Chart } from 'chart.js';
 export default function V1() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getalldata"
+    const URL = "http://127.0.0.1:8080/getv3data"
 
     const [data, setData] = useState();
     useEffect(() => {
@@ -31,26 +31,31 @@ export default function V1() {
 
     //chart data
     const chartData = {
-        labels: data && data.map(d => d.date),
         datasets: [
             {
                 label: "Annual average",
-                data: data && data.map(d => d.annualavg),
+                data: data,
                 backgroundColor: 'red',
                 borderColor: 'red',
                 borderWidth: 1,
+                parsing: {
+                    xAxisKey: "date",
+                    yAxisKey: "annualavg",
+                  },
                 pointRadius: 0
             },
             {
-                label: "Monthly average ",
-                data: data && data.map(d => d.monthlyavg),
+                label: "Monthly average",
+                data: data,
                 backgroundColor: 'Blue',
                 borderColor: 'Blue',
                 borderWidth: 1,
+                parsing: {
+                    xAxisKey: "date",
+                    yAxisKey: "monthlyavg",
+                  },
                 pointRadius: 0
             },
-
-
         ]
     };
 
@@ -66,7 +71,6 @@ export default function V1() {
         scales: {
             x: {
                 type: 'time',
-                min: 1958,
                 time: {
                     unit: 'year'
                 }
