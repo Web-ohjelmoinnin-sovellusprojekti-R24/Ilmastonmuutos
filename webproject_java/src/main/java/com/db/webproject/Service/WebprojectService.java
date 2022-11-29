@@ -20,8 +20,20 @@ public class WebprojectService {
     public List<Visualizations> getAllData(){
         return v1Repository.findAll();   
     }
-  ////     return v1Repository.getNorthernData();
-  //  }
-
+  /*
+   *  public List<Visualizations> getV3Data(){
+      return v1Repository.getV3Data();    
+  }
+    public List<BigDecimal> getNorthernData(){
+      return v1Repository.getNothernData();
+  }
+   */
+   
+  public List<Visualizations> getV5Data(){
+    return v1Repository.getV5Data();
+  }
+  public List<Visualizations> getV3andV4Data(){
+    return v1Repository.getV3andV4data();
+  }
    
 }

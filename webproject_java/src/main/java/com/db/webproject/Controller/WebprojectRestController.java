@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.db.webproject.Data.Users;
+import com.db.webproject.Data.V1Repository;
 import com.db.webproject.Data.V4;
 import com.db.webproject.Data.V5;
 import com.db.webproject.Data.Visualizations;
@@ -41,26 +42,28 @@ public class WebprojectRestController {
     public List<Visualizations> getalldata(){
         return webprojectService.getAllData();
     }
-
-   // @GetMapping("getnortherndata")
- //   public List<BigDecimal> getnortherndata(){
-   //     return webprojectService.getNorthernData();
- //   }
+/*
+ @GetMapping("getnortherndata")
+    public List<BigDecimal> getnortherndata(){
+        return webprojectService.getNorthernData();
+    }
+ */
+    
 
     @GetMapping("getdata")
     public List<Users> getData(){
         return UserService.getData();
     }
-
-    @GetMapping("getv5data")
-    public List<V5> getV5Data(){
-        return v5Service.getCO();
+    @GetMapping("getv3andv4data")
+    public List<Visualizations> getV3andV4Data(){
+        return webprojectService.getV3andV4Data();
     }
 
-    @GetMapping("getv4data")
-    public List<V4> getv4Data(){
-        return v4Service.getCO();
-}
+    @GetMapping("getv5data")
+    public List<Visualizations> getV5Data(){
+        return webprojectService.getV5Data();
+    }
+
 
 
 }

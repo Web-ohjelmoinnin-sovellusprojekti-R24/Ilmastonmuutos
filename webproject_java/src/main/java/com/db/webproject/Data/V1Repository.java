@@ -10,7 +10,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface V1Repository extends JpaRepository<Visualizations, Integer> {
 
-   /*  @Query(value="SELECT Date, Anomaly_deg_C_Global_NH_SH_2_Monthly,Anomaly_deg_C_Northern_hemisphere, Anomaly_deg_C_Southern_hemisphere FROM monthly", nativeQuery = true)
-    List<V1> getAllData();*/
+    @Query(value="SELECT * FROM visualizations WHERE time_type = 'V3A' or time_type = 'V3M' or time_type = 'V4A'", nativeQuery = true)
+    List<Visualizations> getV3andV4data();
 
+    @Query(value="SELECT * FROM visualizations WHERE time_type = 'V5'", nativeQuery = true)
+    List<Visualizations> getV5Data();
+
+   /* @Query(value="SELECT northernd FROM visualizations", nativeQuery = true)
+    List<BigDecimal> getNothernData();
+    */
 }

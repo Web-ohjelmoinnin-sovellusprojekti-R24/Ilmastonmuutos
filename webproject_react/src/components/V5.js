@@ -24,11 +24,11 @@ export default function V5(){
 
 
     const chartData = {
-        labels: data && data.map(d => d.year),
+        labels: data && data.map(d => d.date),
         datasets: [
             {
                 label: "co2",
-                data: data && data.map(d => d.co2),
+                data: data && data.map(d => d.vostok),
                 backgroundColor: 'red',
                 borderColor: 'red',
                 borderWidth: 1,
@@ -48,10 +48,7 @@ export default function V5(){
         },
         scales: {
             x: { 
-                
-                    reverse: true,
-                    min: 2342,
-                    max: 417160,  
+                reverse: true,
             },
             y: {
                 position: "right",

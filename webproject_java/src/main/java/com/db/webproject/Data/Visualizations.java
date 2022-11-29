@@ -37,12 +37,13 @@ public class Visualizations {
     private  BigDecimal de08_2;
     @Column(name = "dss")
     private  BigDecimal dss;
-
+    @Column(name = "vostok")
+    private  BigDecimal vostok;
 
     public Visualizations() {
     }
 
-    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, BigDecimal de08, BigDecimal de08_2, BigDecimal dss) {
+    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, BigDecimal de08, BigDecimal de08_2, BigDecimal dss, BigDecimal vostok) {
         this.id = id;
         this.date = date;
         this.time_type = time_type;
@@ -55,6 +56,7 @@ public class Visualizations {
         this.de08 = de08;
         this.de08_2 = de08_2;
         this.dss = dss;
+        this.vostok = vostok;
     }
 
     public Integer getId() {
@@ -153,7 +155,14 @@ public class Visualizations {
         this.dss = dss;
     }
 
+    public BigDecimal getVostok() {
+        return this.vostok;
+    }
+
+    public void setVostok(BigDecimal vostok) {
+        this.vostok = vostok;
+    }
+
+
 
 }
-
-    

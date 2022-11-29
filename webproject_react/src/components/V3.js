@@ -13,7 +13,7 @@ import { Chart } from 'chart.js';
 export default function V1() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getalldata"
+    const URL = "http://127.0.0.1:8080/getv3andv4data"
 
     const [data, setData] = useState();
     useEffect(() => {
