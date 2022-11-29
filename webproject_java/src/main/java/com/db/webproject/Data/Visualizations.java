@@ -31,12 +31,18 @@ public class Visualizations {
     private  BigDecimal annualavg;
     @Column(name = "monthlyavg")
     private  BigDecimal monthlyavg;
+    @Column(name = "de08")
+    private  BigDecimal de08;
+    @Column(name = "de08_2")
+    private  BigDecimal de08_2;
+    @Column(name = "dss")
+    private  BigDecimal dss;
 
 
     public Visualizations() {
     }
 
-    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg) {
+    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, BigDecimal de08, BigDecimal de08_2, BigDecimal dss) {
         this.id = id;
         this.date = date;
         this.time_type = time_type;
@@ -46,6 +52,9 @@ public class Visualizations {
         this.globalc = globalc;
         this.annualavg = annualavg;
         this.monthlyavg = monthlyavg;
+        this.de08 = de08;
+        this.de08_2 = de08_2;
+        this.dss = dss;
     }
 
     public Integer getId() {
@@ -120,4 +129,31 @@ public class Visualizations {
         this.monthlyavg = monthlyavg;
     }
 
+    public BigDecimal getDe08() {
+        return this.de08;
+    }
+
+    public void setDe08(BigDecimal de08) {
+        this.de08 = de08;
+    }
+
+    public BigDecimal getDe08_2() {
+        return this.de08_2;
+    }
+
+    public void setDe08_2(BigDecimal de08_2) {
+        this.de08_2 = de08_2;
+    }
+
+    public BigDecimal getDss() {
+        return this.dss;
+    }
+
+    public void setDss(BigDecimal dss) {
+        this.dss = dss;
+    }
+
+
 }
+
+    

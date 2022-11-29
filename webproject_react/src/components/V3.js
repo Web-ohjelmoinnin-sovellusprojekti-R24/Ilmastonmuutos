@@ -49,11 +49,35 @@ export default function V1() {
                 borderWidth: 1,
                 pointRadius: 0
             },
+            {
+                label: "DE08",
+                data: data && data.map(d => d.de08),
+                backgroundColor: 'Green',
+                borderColor: 'Green',
+                borderWidth: 1,
+                pointRadius: 0
+            },
+            {
+                label: "DE08_2",
+                data: data && data.map(d => d.de08_2),
+                backgroundColor: 'Purple',
+                borderColor: 'Purple',
+                borderWidth: 1,
+                pointRadius: 0
+            },
+            {
+                label: "DSS",
+                data: data && data.map(d => d.dss),
+                backgroundColor: 'Black',
+                borderColor: 'Black',
+                borderWidth: 1,
+                pointRadius: 0
+            },
 
 
         ]
     };
-
+   
     //options
     const options = {
         spanGaps: true,
@@ -66,7 +90,7 @@ export default function V1() {
         scales: {
             x: {
                 type: 'time',
-                min: 1958,
+                
                 time: {
                     unit: 'year'
                 }

@@ -22,13 +22,13 @@ public class V4 {
     @Column(name ="dss")
     private BigDecimal dss;
     @Column(name = "year")
-    private double year;
+    private String year;
 
 
     public V4() {
     }
 
-    public V4(Integer ID, BigDecimal de08, BigDecimal de082, BigDecimal dss, double year) {
+    public V4(Integer ID, BigDecimal de08, BigDecimal de082, BigDecimal dss, String year) {
         this.ID = ID;
         this.de08 = de08;
         this.de082 = de082;
@@ -68,11 +68,11 @@ public class V4 {
         this.dss = dss;
     }
 
-    public double getYear() {
+    public String getYear() {
         return this.year;
     }
 
-    public void setYear(double year) {
+    public void setYear(String year) {
         this.year = year;
     }
     
