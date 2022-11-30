@@ -80,8 +80,10 @@ export default function V1() {
         scales: {
             x: {
                 type: 'time',
+                max: 2000,
                 time: {
                     unit: 'year'
+                    
                 }
             },
             y: {
