@@ -11,7 +11,7 @@ import { CategoryScale, LinearScale, PointElement, LineElement, Title } from 'ch
 
 export default function V7(){
 
-const URL = "http://127.0.0.1:8080/v6data"
+const URL = "http://127.0.0.1:8080/getv7data"
     
     const [data, setData] = useState();
     useEffect(() => {
@@ -28,12 +28,12 @@ const URL = "http://127.0.0.1:8080/v6data"
 
     }, [])
 
-    const sortedData = data && data.sort((a,b) => a.year-b.year)
+    const sortedData = data && data.sort((a,b) => a.date-b.date)
     const dataCo2 = sortedData &&  (sortedData.filter((d) => d.co2  !== null));
     const dataTemp = sortedData &&  (sortedData.filter((d) => d.temp  !== null));
     
     const chartData = {
-        labels: sortedData && sortedData.map(d => d.year),
+        labels: sortedData && sortedData.map(d => d.date),
         datasets: [
             {
                 label: "co2",
@@ -56,50 +56,43 @@ const URL = "http://127.0.0.1:8080/v6data"
         ]
     };
 
-    const config = {
-        type: 'line',
-        data: data,
-        options: {
-          responsive: true,
-          interaction: {
-            mode: 'index',
-            intersect: false,
-          },
-          stacked: false,
-          plugins: {
-            title: {
+    const options = {
+      responsive: true,
+      plugins: {
+          title: {
               display: true,
-              text: 'Evolution of global temperature over the past two million years'
-            }
-          },
-          scales: {
-            x: {
-              type: 'time',
-          },
-            y: {
-              type: 'linear',
-              display: true,
-              position: 'left',
-            },
-            y1: {
-              type: 'linear',
-              display: true,
-              position: 'right',
-      
-              // grid line settings
-              grid: {
-                drawOnChartArea: false, // only want the grid lines for one axis to show up
-              },
-            },
+              text: 'Ice core 800k year composite study CO2 measurements'
           }
-        },
-      };
+      },
+          scales: {
+          x: {
+
+              min: -803717,
+              max: 2002
+              
+          },
+          y: {
+              position: "left",
+              grace: '5%',
+              ticks: {
+                  stepSize: 10
+              },
+          },
+          y1: {
+            position: "right",
+              grace: '5%',
+              ticks: {
+                  stepSize: 10
+              },
+          }
+      },
+  }
 
 
     return (
         <div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            <Line data={chartData} config={config} width="500px" height="auto" />
+            <Line data={chartData} options={options} width="500px" height="auto" />
             </div>
             <div>
                 

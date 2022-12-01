@@ -14,7 +14,7 @@ import { CategoryScale, LinearScale, PointElement, LineElement, Title } from 'ch
 export default function V6() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/v6data"
+    const URL = "http://127.0.0.1:8080/getv6data"
     
     const [data, setData] = useState();
     useEffect(() => {
@@ -33,7 +33,8 @@ export default function V6() {
     
     //chart data
     const chartData = {
-        labels: data && data.map(d => d.year),
+
+        labels: data && data.map(d => d.date),
         datasets: [
             {
                 label: "co2",
@@ -57,15 +58,16 @@ export default function V6() {
         },
             scales: {
             x: {
-                min: -52,
-                max: 805669,
+                reverse: true,
+                min: -803717,
+                max: 2002
                 
             },
             y: {
-                position: "right",
+                position: "left",
                 grace: '5%',
                 ticks: {
-                    stepSize: 0.5
+                    stepSize: 10
                 },
             }
         },
