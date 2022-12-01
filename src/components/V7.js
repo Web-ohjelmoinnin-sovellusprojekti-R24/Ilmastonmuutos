@@ -61,13 +61,13 @@ const URL = "http://127.0.0.1:8080/getv7data"
       plugins: {
           title: {
               display: true,
-              text: 'Ice core 800k year composite study CO2 measurements'
+              text: 'Evolution of global temperature over the past two million years'
           }
       },
           scales: {
           x: {
 
-              min: -803717,
+              min: -2000000,
               max: 2002
               
           },
