@@ -13,7 +13,7 @@ import { Chart } from 'chart.js';
 export default function V1() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getv3data"
+    const URL = "http://127.0.0.1:8080/getv3andv4data"
 
     const [data, setData] = useState();
     useEffect(() => {
@@ -31,34 +31,53 @@ export default function V1() {
 
     //chart data
     const chartData = {
+        labels: data && data.map(d => d.date),
         datasets: [
             {
                 label: "Annual average",
-                data: data,
+                data: data && data.map(d => d.annualavg),
                 backgroundColor: 'red',
                 borderColor: 'red',
                 borderWidth: 1,
-                parsing: {
-                    xAxisKey: "date",
-                    yAxisKey: "annualavg",
-                  },
                 pointRadius: 0
             },
             {
-                label: "Monthly average",
-                data: data,
+                label: "Monthly average ",
+                data: data && data.map(d => d.monthlyavg),
                 backgroundColor: 'Blue',
                 borderColor: 'Blue',
                 borderWidth: 1,
-                parsing: {
-                    xAxisKey: "date",
-                    yAxisKey: "monthlyavg",
-                  },
                 pointRadius: 0
             },
+            {
+                label: "DE08",
+                data: data && data.map(d => d.de08),
+                backgroundColor: 'Green',
+                borderColor: 'Green',
+                borderWidth: 1,
+                pointRadius: 0
+            },
+            {
+                label: "DE08_2",
+                data: data && data.map(d => d.de08_2),
+                backgroundColor: 'Purple',
+                borderColor: 'Purple',
+                borderWidth: 1,
+                pointRadius: 0
+            },
+            {
+                label: "DSS",
+                data: data && data.map(d => d.dss),
+                backgroundColor: 'Black',
+                borderColor: 'Black',
+                borderWidth: 1,
+                pointRadius: 0
+            },
+
+
         ]
     };
-
+   
     //options
     const options = {
         spanGaps: true,
@@ -71,6 +90,7 @@ export default function V1() {
         scales: {
             x: {
                 type: 'time',
+                
                 time: {
                     unit: 'year'
                 }

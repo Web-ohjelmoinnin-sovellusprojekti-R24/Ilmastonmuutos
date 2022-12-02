@@ -45,6 +45,17 @@ public class WebprojectRestController {
     @GetMapping("getdata")
     public List<Users> getData(){
         return UserService.getData();
+
     }
 
+
+    @GetMapping("getv3andv4data")
+    public List<Visualizations> getV3andV4Data(){
+        return webprojectService.getV3andV4Data();
+    }
+
+    @GetMapping("getv5data")
+    public List<Visualizations> getV5Data(){
+        return webprojectService.getV5Data();
+    }
 }

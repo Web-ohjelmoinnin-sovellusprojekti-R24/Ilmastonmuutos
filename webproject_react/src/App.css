@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    background-color: #b6b6fd;
+}
+.navbar > * {
+    margin-right: 500px;
+}
+
+h1{
+    margin-left: 700px;
+}
+
