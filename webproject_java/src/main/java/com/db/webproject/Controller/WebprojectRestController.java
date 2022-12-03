@@ -29,8 +29,8 @@ public class WebprojectRestController {
     UserViewsService UserViewservice;
 
     @GetMapping("getalldata")
-    public List<Visualizations> getalldata(){
-        return webprojectService.getAllData();
+    public List<Visualizations> getV1andV2data(){
+        return webprojectService.getV1andV2Data();
     }
 /*
  @GetMapping("getnortherndata")

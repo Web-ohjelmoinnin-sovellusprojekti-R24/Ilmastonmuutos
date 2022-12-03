@@ -28,6 +28,10 @@ public class WebprojectService {
       return v1Repository.getNothernData();
   }
    */
+
+  public List<Visualizations> getV1andV2Data(){
+    return v1Repository.getV1andV2data();
+  }
    
   public List<Visualizations> getV5Data(){
     return v1Repository.getV5Data();

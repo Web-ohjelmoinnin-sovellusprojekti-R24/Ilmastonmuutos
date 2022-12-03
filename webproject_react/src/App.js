@@ -14,10 +14,12 @@ function App() {
   return (
     <div>
       <div className='navbar'>
-        <div>Create new view</div>
+        <Link to="/views"><div>Create new view</div></Link>
+        <div>
+        Temperature data and co2 concentrations
+        Emission sources
+        </div>  
         <Link to="/"><div>Logout</div></Link>
-        <div>Temperature data and co2 concentrations</div>
-        <div>Emission sources</div>  
  
       </div>
         <Routes>
