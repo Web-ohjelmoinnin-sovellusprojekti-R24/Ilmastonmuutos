@@ -20,7 +20,7 @@ return (
         </Form>
         <Link to="/v1"><Button>Login</Button></Link>
         <div>
-            <p className='text1'>Don't have an account? Create one!</p>
+            <p>Don't have an account? Create one!</p>
         </div>
     </div>
 

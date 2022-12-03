@@ -1,8 +1,10 @@
 .navbar{
     background-color: #b6b6fd;
+    
 }
 h1{
     text-align: center;
+    
 }
 Form{
     text-align: center;
@@ -13,9 +15,10 @@ Form{
     text-align: center;
    
     margin-left: 920px;
-};
-
-.text1{
-    text-align: center;
 }
 
+
+p{
+    
+    text-align: center;
+}

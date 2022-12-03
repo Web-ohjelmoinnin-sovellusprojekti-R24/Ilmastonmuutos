@@ -15,10 +15,6 @@ function App() {
     <div>
       <div className='navbar'>
         <Link to="/views"><div>Create new view</div></Link>
-        <div>
-        Temperature data and co2 concentrations
-        Emission sources
-        </div>  
         <Link to="/"><div>Logout</div></Link>
  
       </div>
