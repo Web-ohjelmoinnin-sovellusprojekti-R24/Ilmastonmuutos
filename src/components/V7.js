@@ -28,9 +28,12 @@ const URL = "http://127.0.0.1:8080/getv7data"
 
     }, [])
 
-    const sortedData = data && data.sort((a,b) => a.date-b.date)
+    
+    const sortedData = data && data.sort((a,b) => a.date-b.date);
     const dataCo2 = sortedData &&  (sortedData.filter((d) => d.co2  !== null));
     const dataTemp = sortedData &&  (sortedData.filter((d) => d.temp  !== null));
+    
+    
     
     const chartData = {
         labels: sortedData && sortedData.map(d => d.date),
@@ -67,8 +70,8 @@ const URL = "http://127.0.0.1:8080/getv7data"
           scales: {
           x: {
 
-              min: -2000000,
-              max: 2002
+              min: "-2000000",
+              max: "-491000",
               
           },
           y: {
