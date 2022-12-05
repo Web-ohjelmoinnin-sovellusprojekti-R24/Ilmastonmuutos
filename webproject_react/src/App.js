@@ -8,6 +8,7 @@ import V9_try from './components/v9_try';
 import V1_V2 from './components/V1_V2';
 import V3 from './components/V3';
 import Button from 'react-bootstrap/Button';
+import EditUser from './components/EditUser';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/v3" element={<V3/>}/>
         <Route path="/v5" element={<V5/>}/>
         <Route path="/v9" element={<V9_try/>}/>
+        <Route path="/edituser" element={<EditUser/>}/>
         </Routes>
     </div> 
   );

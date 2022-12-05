@@ -2,23 +2,34 @@
     background-color: #b6b6fd;
     
 }
-h1{
+.title{
+    padding-top: 200px;
+    font-size: 50px;
+    font-weight: bold;
     text-align: center;
     
 }
 Form{
+    padding-top: 50px;
     text-align: center;
-    width: 500px;
+    width: 300px;
+    font-size: 25px;
     margin: auto;
 }
-.btn {
-    text-align: center;
-   
-    margin-left: 920px;
+.loginbtn {
+    
+    margin-top: 25px;
+    margin-left: 930px;
 }
 
 
-p{
-    
+.loginpagetext{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.deleteusertext{
+    color: red;
+    padding-top: 15px;
     text-align: center;
 }

@@ -7,20 +7,20 @@ import {Button, Form, Col, Row, Container} from 'react-bootstrap';
 export default function Login() {
 return (
     <div>
-        <h1>History Of Climate Changes</h1>
+        <h1 className="title">History Of Climate Changes</h1>
         <Form>
            <Form.Group>
             <Form.Label>Username</Form.Label>
-            <Form.Control type="email" placeholder="Example@email.com"/>
+            <Form.Control type="username" placeholder="Example1234"/>
             </Form.Group> 
             <Form.Group>
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="********"/>
             </Form.Group> 
         </Form>
-        <Link to="/v1"><Button>Login</Button></Link>
+        <Link to="/v1"><Button className="loginbtn">Login</Button></Link>
         <div>
-            <p>Don't have an account? Create one!</p>
+            <p className="loginpagetext">Don't have an account? <br />Create one!</p>
         </div>
     </div>
 
