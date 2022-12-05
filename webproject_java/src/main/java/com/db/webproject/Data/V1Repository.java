@@ -14,6 +14,9 @@ public interface V1Repository extends JpaRepository<Visualizations, Integer> {
     @Query(value="SELECT * FROM visualizations", nativeQuery = true)
     List<Visualizations> getAllData();
 
+    @Query(value="SELECT * FROM visualizations WHERE time_type = 'V1A' or time_type = 'V1M' or time_type = 'V2'", nativeQuery = true)
+    List<Visualizations> getV1andV2data();
+
     @Query(value="SELECT * FROM visualizations WHERE time_type = 'V3A' or time_type = 'V3M'", nativeQuery = true)
     List<Visualizations> getV3Data();
 
@@ -25,5 +28,10 @@ public interface V1Repository extends JpaRepository<Visualizations, Integer> {
 
     @Query(value="SELECT * FROM visualizations WHERE time_type = 'V5'", nativeQuery = true)
     List<Visualizations> getV5Data();
+
+    @Query(value="SELECT * FROM visualizations where time_type='V7' OR time_type='V6'", nativeQuery = true)
+    List<Visualizations> getV7Data();
    
+    @Query(value="SELECT * FROM visualizations where time_type='V6'", nativeQuery = true)
+    List<Visualizations> getV6Data();
 }

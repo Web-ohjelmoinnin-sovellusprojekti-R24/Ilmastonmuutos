@@ -33,4 +33,16 @@ public class WebprojectService {
       public List<Visualizations> getV3andV4Data(){
         return v1Repository.getV3andV4data();
       }
+
+      public List<Visualizations> getV6Data(){
+        return v1Repository.getV6Data();
+    }
+
+    public List<Visualizations> getV7Data(){
+        return v1Repository.getV7Data();
+    }
+
+    public List<Visualizations> getV1V2Data(){
+        return v1Repository.getV1andV2data();
+    }
 }
