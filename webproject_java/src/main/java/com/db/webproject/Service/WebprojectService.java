@@ -26,11 +26,4 @@ public class WebprojectService {
     public List<BigDecimal> getNorthernData(){
         return v1Repository.getNothernData();
     }
-
-    public List<Visualizations> getV5Data(){
-        return v1Repository.getV5Data();
-      }
-      public List<Visualizations> getV3andV4Data(){
-        return v1Repository.getV3andV4data();
-      }
 }
