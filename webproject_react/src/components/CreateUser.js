@@ -2,12 +2,12 @@ import React from "react";
 import {Button, Form, Col, Row, Container} from 'react-bootstrap';
 
 
-export default function EditUser() {
+export default function CreateUser() {
 return (
     <div>
        <Form>
            <Form.Group>
-            <Form.Label>Change user info</Form.Label>
+            <Form.Label className="createusertext">Create user</Form.Label>
             <Form.Control type="username" placeholder="Example1234"/>
             </Form.Group> 
             <Form.Group>
@@ -21,7 +21,7 @@ return (
         </Form>
 
         <div>
-            <p className="deleteusertext">DELETE USER</p>
+            <Button className="createbtn">Create account</Button>
         </div>
     </div>
 )

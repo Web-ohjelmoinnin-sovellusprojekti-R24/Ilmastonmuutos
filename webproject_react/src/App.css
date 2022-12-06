@@ -21,8 +21,6 @@ Form{
     margin-top: 25px;
     margin-left: 930px;
 }
-
-
 .loginpagetext{
     padding-top: 15px;
     text-align: center;
@@ -30,6 +28,13 @@ Form{
 
 .deleteusertext{
     color: red;
-    padding-top: 15px;
+    padding-top: 25px;
     text-align: center;
+}
+.createusertext{
+    padding-top: 100px;
+}
+.createbtn{
+    margin-left: 900px;
+    margin-top: 25px;
 }
