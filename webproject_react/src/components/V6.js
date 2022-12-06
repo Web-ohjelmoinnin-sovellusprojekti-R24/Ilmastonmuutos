@@ -76,7 +76,7 @@ export default function V6() {
     return (
         <div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            <Line data={chartData} options={options} width="500px" height="auto" />
+            <Line data={chartData} options={options} width="500px" height="200px" />
             </div>
             <div>
                 

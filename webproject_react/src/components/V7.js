@@ -29,18 +29,15 @@ const URL = "http://127.0.0.1:8080/getv7data"
     }, [])
 
     
-    const sortedData = data && data.sort((a,b) => a.date-b.date);
-    const dataCo2 = sortedData &&  (sortedData.filter((d) => d.co2  !== null));
-    const dataTemp = sortedData &&  (sortedData.filter((d) => d.temp  !== null));
-    
-    
+   data && data.sort((a,b) => a.date-b.date);
+
     
     const chartData = {
-        labels: sortedData && sortedData.map(d => d.date),
+        labels: data && data.map(d => d.date),
         datasets: [
             {
                 label: "co2",
-                data: dataCo2 && dataCo2.map(d => d.co2),
+                data: data && data.map(d => d.co2),
                 backgroundColor: 'blue', 
                 borderColor: 'blue',
                 borderWidth: 1,
@@ -49,7 +46,7 @@ const URL = "http://127.0.0.1:8080/getv7data"
             },
             {
                 label: "temp",
-                data: dataTemp && dataTemp.map(d => d.temp),
+                data: data && data.map(d => d.temp),
                 backgroundColor: 'red', 
                 borderColor: 'red',
                 borderWidth: 1,
@@ -60,6 +57,7 @@ const URL = "http://127.0.0.1:8080/getv7data"
     };
 
     const options = {
+      spanGaps: true,
       responsive: true,
       plugins: {
           title: {
@@ -71,22 +69,16 @@ const URL = "http://127.0.0.1:8080/getv7data"
           x: {
 
               min: "-2000000",
-              max: "-491000",
+              max: "0",
               
           },
           y: {
               position: "left",
               grace: '5%',
-              ticks: {
-                  stepSize: 10
-              },
           },
           y1: {
             position: "right",
               grace: '5%',
-              ticks: {
-                  stepSize: 10
-              },
           }
       },
   }
@@ -95,7 +87,7 @@ const URL = "http://127.0.0.1:8080/getv7data"
     return (
         <div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            <Line data={chartData} options={options} width="500px" height="auto" />
+            <Line data={chartData} options={options} width="600px" height="200px" />
             </div>
             <div>
                 
