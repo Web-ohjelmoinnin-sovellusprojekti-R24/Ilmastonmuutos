@@ -39,6 +39,10 @@ public class Visualizations {
     private  BigDecimal dss;
     @Column(name = "vostok")
     private  BigDecimal vostok;
+    @Column(name = "temp")
+    private  BigDecimal temp;
+    @Column(name = "co2")
+    private  BigDecimal co2;
 
     public Visualizations() {
     }
