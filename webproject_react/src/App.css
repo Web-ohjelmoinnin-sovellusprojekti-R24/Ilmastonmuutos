@@ -1,12 +1,42 @@
 .navbar{
-    display: flex;
     background-color: #b6b6fd;
+    
 }
-.navbar > * {
-    margin-right: 500px;
+.title{
+    padding-top: 200px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+Form{
+    padding-top: 50px;
+    text-align: center;
+    width: 300px;
+    font-size: 25px;
+    margin: auto;
+}
+.loginbtn {
+    
+    margin-top: 25px;
+    
+}
+.loginpagetext{
+    padding-top: 15px;
+    text-align: center;
 }
 
-h1{
-    margin-left: 700px;
+.deleteusertext{
+    color: red;
+    padding-top: 25px;
+    text-align: center;
 }
+.createusertext{
+    padding-top: 100px;
+}
+.createbtn{
+    margin-left: 900px;
+    margin-top: 25px;
+}
+
 

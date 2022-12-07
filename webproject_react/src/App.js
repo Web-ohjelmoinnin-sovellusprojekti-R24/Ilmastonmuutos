@@ -14,14 +14,12 @@ import V7 from './components/V7';
 function App() {
 
   return (
+
+    
     <div>
-      <div className='navbar'>
-        <div>Create new view</div>
-        <Link to="/"><div>Logout</div></Link>
-        <div>Temperature data and co2 concentrations</div>
-        <div>Emission sources</div>  
- 
-      </div>
+
+        <NavBar/>
+      
         <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path='/views' element={<CreateView/>}/>
@@ -30,6 +28,9 @@ function App() {
         <Route path="/v5" element={<V5/>}/>
         <Route path="/v6" element={<V6/>}/>
         <Route path="/v7" element={<V7/>}/>
+        <Route path="/v9" element={<V9_try/>}/>
+        <Route path="/createuser" element={<CreateUser/>}/>
+        <Route path="/settings" element={<Settings/>}/>
         </Routes>
     </div> 
   );
