@@ -18,7 +18,10 @@ return (
             <Form.Control type="password" placeholder="********"/>
             </Form.Group> 
         </Form>
+        <div class="text-center">
         <Link to="/v1"><Button className="loginbtn">Login</Button></Link>
+        </div>
+        
         <div>
             <p className="loginpagetext">Don't have an account? <br />Create one!</p>
         </div>
