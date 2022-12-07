@@ -20,7 +20,7 @@ return (
             </Form.Group> 
         </Form>
 
-        <div>
+        <div class="text-center">
             <Button className="createbtn">Create account</Button>
         </div>
     </div>

@@ -10,21 +10,19 @@ import V3 from './components/V3';
 import Button from 'react-bootstrap/Button';
 import CreateUser from './components/CreateUser';
 import Settings from './components/Settings';
+
+import NavBar from './components/NavBar';
 import {Nav, navbar} from 'react-bootstrap';
 
 function App() {
 
   return (
+
+    
     <div>
-      <div className='navbar'>
-        <Nav>
-        <Link to="/views"><div>Create new view</div></Link>
-        <Link to="/"><div>Logout</div></Link>
-        </Nav>
-        
-        
- 
-      </div>
+
+        <NavBar/>
+      
         <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path='/views' element={<CreateView/>}/>
