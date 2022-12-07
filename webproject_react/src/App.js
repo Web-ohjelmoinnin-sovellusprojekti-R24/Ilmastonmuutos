@@ -10,6 +10,9 @@ import V3 from './components/V3';
 import Button from 'react-bootstrap/Button';
 import V6 from './components/V6';
 import V7 from './components/V7';
+import NavBar from './components/NavBar';
+import CreateUser from './components/CreateUser';
+import Settings from './components/Settings';
 
 function App() {
 
