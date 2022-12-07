@@ -112,6 +112,9 @@ export default function V1() {
                 <a href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">Data measurement description </a>
             </div>
             <div>
+                <a href="https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat">CO2 data used in charts </a>
+            </div>
+            <div>
                 <p>This graph describes atmospheric CO2 concentrations from Mauna Loa by annual and monthly average.</p>
             </div>
         </div>
