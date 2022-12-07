@@ -8,7 +8,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.db.webproject.Data.Users;
 import com.db.webproject.Data.UsersRepository;
 
@@ -41,6 +44,20 @@ public class UsersService {
         }
         Algorithm alg = Algorithm.HMAC256(JWTk);
         return JWT.create().withSubject(u.getUsername()).sign(alg);
+    }
+
+    public String ValidateJWT(String jwtToken){
+        Algorithm alg = Algorithm.HMAC256(JWTk);
+        JWTVerifier verifier = JWT.require(alg).build();
+
+        try{
+            DecodedJWT jwt = verifier.verify(jwtToken);
+            return jwt.getSubject();
+        } catch (JWTVerificationException e){
+
+        }
+
+        return null;
     }
     
 }

@@ -3,7 +3,9 @@ package com.db.webproject.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,6 +32,19 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
         return new ResponseEntity<>(token, HttpStatus.OK);
+    }
+
+    @GetMapping("views")
+    public ResponseEntity<String> getViews(@RequestHeader("Authorization") String bearer){
+        if(bearer.startsWith("Bearer")){
+            String token = bearer.split(" ")[1];
+            String username = serv.ValidateJWT(token);
+            if(username!=null){
+                return new ResponseEntity<>("Views for "+username, HttpStatus.OK);
+            }
+        }
+        return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+
     }
     
 }
