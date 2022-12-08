@@ -80,6 +80,8 @@ export default function V1() {
    
     //options
     const options = {
+        responsive: true,
+        /*maintainAspectRatio: false,*/
         spanGaps: true,
         plugins: {
             title: {
@@ -105,8 +107,9 @@ export default function V1() {
     return (
         <div>
 
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div className='chart-container' style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
                 <Line options={options} data={chartData} width="500px" height="auto" />
+                <canvas id="chart"></canvas>
             </div>
             <div>
                 <a href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">Data measurement description </a>

@@ -40,3 +40,17 @@ Form{
 }
 
 
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+
+    .chart-container{
+        width: 600px;
+        height: 450px;
+    }
+
+}
+
+
