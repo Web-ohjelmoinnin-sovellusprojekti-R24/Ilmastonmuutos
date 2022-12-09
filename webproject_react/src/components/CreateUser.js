@@ -30,7 +30,6 @@ export default function CreateUser() {
                 console.log(error);
             })
         event.preventDefault();
-
     }
     return (
         <div>
@@ -41,11 +40,12 @@ export default function CreateUser() {
                 </Form.Group>
                 <Form.Group>
                     <Form.Label></Form.Label>
-                    <Form.Control type="password" placeholder="********" autoFocus value={pass} onChange={(e) => setPass(e.target.value)} />
+                    <Form.Control type="password" placeholder="*****" autoFocus value={pass} onChange={(e) => setPass(e.target.value)} />
                 </Form.Group>
             </Form>
+
             <div class="text-center">
-                <Button className="createbtn" type="submit" disabled={!Validate()} >Create account</Button>
+                <Button className="createbtn" type="submit" disabled={!Validate()} onClick={handleSubmit}>Create account</Button>
             </div>
         </div>
     )
