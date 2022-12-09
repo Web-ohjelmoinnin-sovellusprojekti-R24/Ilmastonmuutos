@@ -25,6 +25,7 @@ function App() {
       
         <Routes>
         <Route path="/" element={<Login/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path='/views' element={<CreateView/>}/>
         <Route path="/v1" element={<V1_V2/>}/>
         <Route path="/v3" element={<V3/>}/>
