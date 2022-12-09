@@ -2,6 +2,8 @@
     background-color: #b6b6fd;
     
 }
+
+
 .title{
     padding-top: 200px;
     font-size: 50px;
@@ -35,7 +37,7 @@ Form{
     padding-top: 100px;
 }
 .createbtn{
-    margin-left: 900px;
+    text-align: center;
     margin-top: 25px;
 }
 
@@ -45,12 +47,34 @@ Form{
         font-size: 30px;
         padding-top: 20px;
     }
+    p{
+        font-size: 15px;
+    }
+    a{
+        
+        font-size: 15px;
+    }
 
-    .chart-container{
-        width: 600px;
-        height: 450px;
+    .container-fluid{
+        display: flex;
+        font-size: 10px;
+        
+    }
+    
+    .mychart{
+        width: flex;
+        height: 350px;
     }
 
 }
+
+@media only screen and (min-width: 1024px) {
+    .mychart{
+        width: 100%;
+        height: 700px;
+    }
+
+}
+
 
 

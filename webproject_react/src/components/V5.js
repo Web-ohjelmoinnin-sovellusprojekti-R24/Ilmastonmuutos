@@ -40,6 +40,8 @@ export default function V5(){
 
 
     const options = {
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             title: {
                 display: true,
@@ -64,8 +66,8 @@ export default function V5(){
 
     return (
         <div>
-            <div style={{display: 'flex', alignItems: 'center',flexWrap: 'wrap' }}>
-            <Line options={options} data={chartData} width="500px" height="auto" />
+            <div className='mychart' style={{display: 'flex', alignItems: 'center',flexWrap: 'wrap' }}>
+            <Line options={options} data={chartData} width="100%" height="700px" />
             </div>
             <div>
                 <a href="https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/vostok.icecore.co2">Data used in chart</a>
