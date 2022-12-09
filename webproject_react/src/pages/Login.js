@@ -30,7 +30,7 @@ export default function Login() {
         )
         .then(function (response) {
                 console.log(response);
-                navigate('/home');
+                navigate('/create');
             })
         .catch(function (error) {
                 if (error.response.status === 401) {
