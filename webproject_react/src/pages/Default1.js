@@ -9,7 +9,9 @@ import V7 from '../visualizations/V7'
 export default function Default1() {
   return (
     <div>
-        <h4>Tempature data and co2 concentrations ja emission sources</h4>
+        <center>
+            <h4>Tempature data and co2 concentrations</h4>
+        </center>
         <div>
             <V1/>
         </div>

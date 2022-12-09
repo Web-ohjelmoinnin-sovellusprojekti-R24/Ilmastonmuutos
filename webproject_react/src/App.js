@@ -13,6 +13,8 @@ import NavBar from './components/NavBar';
 import CreateUser from './pages/CreateUser';
 import Settings from './pages/Settings';
 import Default1 from './pages/Default1';
+import Default2 from './pages/Default2';
+import MyViews from './pages/MyViews';
 
 
 function App() {
@@ -30,10 +32,11 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path='/create' element={<CreateView/>}/>
         <Route path="/settings" element={<Settings/>}/>
+        <Route path="/myviews" element={<MyViews/>}/>
 
         <Route path="/default1" element={<Default1/>}/>
-
-
+        <Route path="/default2" element={<Default2/>}/>
+      
         <Route path="/v1" element={<V1_V2/>}/>
         <Route path="/v3" element={<V3/>}/>
         <Route path="/v5" element={<V5/>}/>

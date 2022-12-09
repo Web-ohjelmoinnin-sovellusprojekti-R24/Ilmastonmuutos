@@ -9,26 +9,26 @@ export default function NavBar() {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarsExample02">
+                    
                     <ul class="navbar-nav me-auto">
                         <li class="nav-link active">
-                            <a class="nav-link active" aria-current="page" href="default1">Tempature data and co2 concentrations ja emission sources</a>
+                            <a class="nav-link active" aria-current="page" href="default1">Tempature data and co2 concentrations and emission sources</a>
                         </li>
                         <li class="nav-link active">
-                            <a class="nav-link active" aria-current="page" href="v1">V1/V2</a>
-                        </li>
-                        <li class="nav-link active">
-                            <a class="nav-link active" aria-current="page" href="v3">V3</a>
+                            <a class="nav-link active" aria-current="page" href="default2">Emission sources</a>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-link active">
-                            <a class="nav-link active" aria-current="page" href="settings">Settings</a>
-                        </li>
-                        <li class="nav-link active">
                             <a class="nav-link active" aria-current="page" href="login">Login</a>
                         </li>
-
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="myviews">MyViews</a>
+                        </li>
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="settings">Settings</a>
+                        </li>
                     </ul>   
                 </div>
             </div>
