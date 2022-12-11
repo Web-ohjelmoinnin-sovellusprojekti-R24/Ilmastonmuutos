@@ -91,16 +91,13 @@ const URL = "http://127.0.0.1:8080/getv7data"
             <Line data={chartData} options={options} width="500px" height="700px" />
             </div>
             <div>
-                <a href="http://carolynsnyder.com/publications.php">Data used in chart</a>
-            </div>
-            <div>
-                <a href="http://carolynsnyder.com/papers/Snyder_Data_Figures.zip">ZIP file data</a>
-            </div>
-            <div>
                 <a href="https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf">Data description</a>
             </div>
             <div>
-                <p>Evolution of global temperature over the past two million years </p>
+                <a href="http://carolynsnyder.com/papers/Snyder_Data_Figures.zip">Data used in chart</a>
+            </div>
+            <div>
+                <p>Evolution of global temperature over the past two million years (data doesn't always show but refreshing page and switching to another view helps)</p>
             </div>
         </div>
     )
