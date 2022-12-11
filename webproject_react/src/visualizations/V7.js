@@ -59,6 +59,7 @@ const URL = "http://127.0.0.1:8080/getv7data"
     const options = {
       spanGaps: true,
       responsive: true,
+        maintainAspectRatio: false,
       plugins: {
           title: {
               display: true,
@@ -86,11 +87,20 @@ const URL = "http://127.0.0.1:8080/getv7data"
 
     return (
         <div> 
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            <Line data={chartData} options={options} width="600px" height="200px" />
+            <div className='mychart' style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <Line data={chartData} options={options} width="500px" height="700px" />
             </div>
             <div>
-                
+                <a href="http://carolynsnyder.com/publications.php">Data used in chart</a>
+            </div>
+            <div>
+                <a href="http://carolynsnyder.com/papers/Snyder_Data_Figures.zip">ZIP file data</a>
+            </div>
+            <div>
+                <a href="https://climate.fas.harvard.edu/files/climate/files/snyder_2016.pdf">Data description</a>
+            </div>
+            <div>
+                <p>Evolution of global temperature over the past two million years </p>
             </div>
         </div>
     )

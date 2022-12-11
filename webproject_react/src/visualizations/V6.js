@@ -50,6 +50,7 @@ export default function V6() {
     //options
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             title: {
                 display: true,
@@ -75,11 +76,17 @@ export default function V6() {
     
     return (
         <div> 
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            <Line data={chartData} options={options} width="500px" height="200px" />
+            <div className='mychart' style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <Line data={chartData} options={options} width="500px" height="700px" />
             </div>
             <div>
-                
+                <a href="https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt">Data used in chart</a>
+            </div>
+            <div>
+                <a href="https://www.ncei.noaa.gov/access/paleo-search/study/17975">Data description</a>
+            </div>
+            <div>
+                <p>Antarctic Ice Cores Revised 800KYr CO2 Data</p>
             </div>
         </div>
     )

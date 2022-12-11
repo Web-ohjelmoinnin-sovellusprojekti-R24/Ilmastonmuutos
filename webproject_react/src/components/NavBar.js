@@ -1,4 +1,7 @@
 import React from 'react'
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+
+
 
 export default function NavBar() {
     return (
@@ -35,3 +38,30 @@ export default function NavBar() {
         </nav>
     )
 }
+
+
+/*
+export default function NavBar() {
+    return (
+        <Navbar expand="lg">
+            <Navbar.Brand>
+                <p id="nav-dropdown">Create new view</p>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className='nav-link'>
+                <Nav>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/default1">Temperature data, co2 concentrations and emission sources&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/default2">Emission sources&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/login">Login</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/myviews">My views&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/settings">Settings&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/">Log out</NavDropdown.Item>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+
+    )
+
+}
+*/
+
