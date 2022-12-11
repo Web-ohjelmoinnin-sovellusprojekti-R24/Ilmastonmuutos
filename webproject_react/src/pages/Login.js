@@ -31,6 +31,7 @@ export default function Login() {
         )
         .then(function (response) {
                 console.log(response);
+                sessionStorage.setItem("token", response.data);
                 navigate('/create');
                 
             })
