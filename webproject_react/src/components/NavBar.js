@@ -1,7 +1,7 @@
 import React from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-
+/*
 
 export default function NavBar() {
     return (
@@ -39,13 +39,13 @@ export default function NavBar() {
     )
 }
 
+*/
 
-/*
 export default function NavBar() {
     return (
         <Navbar expand="lg">
             <Navbar.Brand>
-                <p id="nav-dropdown">Create new view</p>
+                <a href="create" id="nav-dropdown">Create new view</a>
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className='nav-link'>
@@ -63,5 +63,5 @@ export default function NavBar() {
     )
 
 }
-*/
+
 
