@@ -59,5 +59,11 @@ public class UsersService {
 
         return null;
     }
+
+    public void delete(String username, String password) {
+        UserRepository.deleteById(username);
+    }
+
+    
     
 }

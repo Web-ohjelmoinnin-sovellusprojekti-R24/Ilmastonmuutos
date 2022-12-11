@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Col, Row, Container } from 'react-bootstrap';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 export default function CreateUser() {
@@ -8,6 +9,8 @@ export default function CreateUser() {
     const URL = "http://localhost:8080/register";
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
+    const navigate = useNavigate();
 
     function Validate() {
         return user.length > 0 && pass.length > 0;
@@ -25,6 +28,10 @@ export default function CreateUser() {
         )
             .then(function (response) {
                 console.log(response);
+                if(response.status == 200){
+                    setSuccessMessage("User created successfully!");
+                }
+                //navigate('/Login');
             })
             .catch(function (error) {
                 console.log(error);
@@ -46,6 +53,9 @@ export default function CreateUser() {
 
             <div class="text-center">
                 <Button className="createbtn" type="submit" disabled={!Validate()} onClick={handleSubmit}>Create account</Button>
+            </div>
+            <div>
+                <p className="loginpagetext">{successMessage}</p>
             </div>
         </div>
     )
