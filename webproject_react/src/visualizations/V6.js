@@ -79,7 +79,13 @@ export default function V6() {
             <Line data={chartData} options={options} width="500px" height="200px" />
             </div>
             <div>
-                
+                <a href="https://www.ncei.noaa.gov/access/paleo-search/study/17975">Data description</a>
+            </div>
+            <div>
+                <a href="https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/antarctica2015co2composite.txt">Data used in chart</a>
+            </div>
+            <div>
+                <p>Ice core 800k year composite study CO2 measurements</p>
             </div>
         </div>
     )

@@ -46,19 +46,6 @@ export default function Login() {
         
 
     }
-
-    // function ValidToken(event){
-    //     axios.get(URL,{
-            
-    //     })
-    //     .then(function (response) {
-    //         console.log(response);
-    //     })
-    // .catch(function (error) {
-    //         console.log(error);
-    //     })
-    //     event.preventDefault();
-    // }
     return (
         <div>
 

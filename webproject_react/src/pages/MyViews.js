@@ -13,7 +13,6 @@ export default function MyViews() {
   });
   const storedJwt = sessionStorage.getItem('token');
   instance.defaults.headers.common['Authorization'] = `Bearer ${storedJwt}`;
-  const [jwt, setJwt] = useState(storedJwt || null);
   useEffect(() => {
     const address = URL
     console.log(address);
