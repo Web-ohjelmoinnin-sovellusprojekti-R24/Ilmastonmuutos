@@ -73,4 +73,8 @@ public class WebprojectRestController {
     public List<Visualizations> getv1v2Data(){
         return webprojectService.getV1V2Data();
     }
+    @GetMapping("getv9data")
+    public List<Visualizations> getv9Data(){
+        return webprojectService.getV9Data();
+    }
 }

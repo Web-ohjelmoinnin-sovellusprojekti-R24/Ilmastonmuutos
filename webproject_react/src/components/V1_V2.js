@@ -84,6 +84,23 @@ export default function V1() {
         ]
     };
 
+   
+   //tooltip
+const test =(tooltipItem) => {
+    console.log(tooltipItem);
+    return "test";
+}
+
+    const config = {
+    plugins: {
+        tooltip:{
+            callbacks: {
+                title: test
+            }
+
+        }
+    }
+}
     //options
     const options = {
         plugins: {

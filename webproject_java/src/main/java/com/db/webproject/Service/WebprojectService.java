@@ -45,4 +45,7 @@ public class WebprojectService {
     public List<Visualizations> getV1V2Data(){
         return v1Repository.getV1andV2data();
     }
+    public List<Visualizations> getV9Data(){
+        return v1Repository.getV9Data();
+    }
 }

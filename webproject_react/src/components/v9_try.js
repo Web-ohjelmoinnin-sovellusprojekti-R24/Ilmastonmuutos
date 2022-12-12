@@ -10,7 +10,7 @@ import { Chart } from 'chart.js';
 export default function V() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getalldata"
+    const URL = "http://127.0.0.1:8080/getv9data"
 
     const [data, setData] = useState();
     useEffect(() => {
@@ -48,41 +48,66 @@ export default function V() {
   }
 ]
     };
+//tooltip
+const test =(tooltipItem) => {
+    console.log(tooltipItem);
+    return "test";
+}
+
+    const config = {
+    plugins: {
+        tooltip:{
+            callbacks: {
+                title: test
+            }
+
+        }
+    }
+}
     const options = {
-        plugins: {
-            legend: {
-                responsive: true,
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Share of global greenhouse gas emissions',
+  canvas : {
+    height: 450,
+    width: 600,
 
-                position: 'top',
-            tooltip:{
-                enabled: true,
-                callback:{
-                    afterFooter: function(context){
-                     //   return:"hello"
-                    }
-                }
-                }
+    tooltips: {
+        callbacks: {
+          title: (items, data) => data.datasets[items[0].datasetIndex].data[items[0].index].myProperty1,
+          label: (item, data) => data.datasets[item.datasetIndex].data[item.index].myProperty2
+        }
+      }
 
+  },
+  
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Share of global greenhouse gas emissions",
+      },
+    },
 
-                }
-                }
-                
-            
+   
+      
+    
+  };
 
-                
-            
-        
-    };
-    return (
-        <div>
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-                <Doughnut options={options} data={chartData} width="5%" height="5%" top="50%" position="absolute"/>
-            </div>
+  return (
+    <div>
+
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <Doughnut options={options} data={chartData} width="900px" height="900px" />
         </div>
-    )
+        <div>
+            <a href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">Data measurement description </a>
+        </div>
+        <div>
+            <p>This graph describes Fossil CO2 emissions by country (territorial)
+.</p>
+        </div>
+    </div>
+)
 }
