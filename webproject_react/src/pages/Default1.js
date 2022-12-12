@@ -10,7 +10,7 @@ export default function Default1() {
   return (
     <div>
         <center>
-            <h4>Tempature data and co2 concentrations</h4>
+            <h4>Temperature data and co2 concentrations</h4>
         </center>
         <div>
             <V1/>
