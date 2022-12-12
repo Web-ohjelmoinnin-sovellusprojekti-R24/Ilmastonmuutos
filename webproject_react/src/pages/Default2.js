@@ -1,5 +1,5 @@
 import React from 'react'
-import V9 from '../visualizations/v9_try';
+import V8 from '../visualizations/V8';
 
 
 export default function Default2() {
@@ -9,7 +9,7 @@ export default function Default2() {
             <h4>Emission sources</h4>
         </center>
         <div>
-            <V9/>
+            <V8/>
         </div>
     </div>
   )

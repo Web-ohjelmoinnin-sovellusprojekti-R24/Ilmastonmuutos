@@ -3,7 +3,6 @@ import Login from './pages/Login';
 import CreateView from './pages/CreateView'
 import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
 import V5 from './visualizations/V5';
-import V9_try from './visualizations/v9_try';
 import V1_V2 from './visualizations/V1_V2';
 import V3 from './visualizations/V3';
 import Button from 'react-bootstrap/Button';
@@ -15,6 +14,7 @@ import Settings from './pages/Settings';
 import Default1 from './pages/Default1';
 import Default2 from './pages/Default2';
 import MyViews from './pages/MyViews';
+import V8 from './visualizations/V8';
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
         <Route path="/v5" element={<V5/>}/>
         <Route path="/v6" element={<V6/>}/>
         <Route path="/v7" element={<V7/>}/>
-        <Route path="/v9" element={<V9_try/>}/>
+        <Route path="/v8" element={<V8/>}/>
 
         </Routes>
     </div> 

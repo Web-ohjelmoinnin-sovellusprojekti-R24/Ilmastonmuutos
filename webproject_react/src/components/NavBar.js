@@ -1,7 +1,7 @@
 import React from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-
+/*
 
 export default function NavBar() {
     return (
@@ -39,8 +39,8 @@ export default function NavBar() {
     )
 }
 
+*/
 
-/*
 export default function NavBar() {
     return (
         <Navbar expand="lg">
@@ -63,5 +63,5 @@ export default function NavBar() {
     )
 
 }
-*/
+
 
