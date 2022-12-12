@@ -52,7 +52,7 @@ export default function NavBar() {
                 <Nav>
                     <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/default1">Temperature data, co2 concentrations and emission sources&nbsp;&nbsp;</NavDropdown.Item>
                     <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/default2">Emission sources&nbsp;&nbsp;</NavDropdown.Item>
-                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/login">Login</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown2" href="/login">Login</NavDropdown.Item>
                     <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/myviews">My views&nbsp;&nbsp;</NavDropdown.Item>
                     <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/settings">Settings&nbsp;&nbsp;</NavDropdown.Item>
                     <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/">Log out</NavDropdown.Item>

@@ -13,7 +13,7 @@ import Settings from './pages/Settings';
 import Default1 from './pages/Default1';
 import Default2 from './pages/Default2';
 import MyViews from './pages/MyViews';
-import V8 from './visualizations/V8';
+import V9 from './visualizations/V9';
 import CreateViewHome from './pages/CreateViewHome';
 import CreateView1 from './pages/CreateView1'
 import CreateView2 from './pages/CreateView2'
@@ -46,7 +46,7 @@ function App() {
         <Route path="/v5" element={<V5/>}/>
         <Route path="/v6" element={<V6/>}/>
         <Route path="/v7" element={<V7/>}/>
-        <Route path="/v8" element={<V8/>}/>
+        <Route path="/v9" element={<V9/>}/>
 
         </Routes>
     </div> 

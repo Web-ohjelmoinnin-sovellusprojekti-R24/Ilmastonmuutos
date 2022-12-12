@@ -10,7 +10,7 @@ import { Chart } from 'chart.js';
 export default function V() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getv8data"
+    const URL = "http://127.0.0.1:8080/getv9data"
 
     const [data, setData] = useState();
     useEffect(() => {
@@ -98,11 +98,14 @@ const test =(tooltipItem) => {
   return (
     <div>
 
-        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className='mychart' style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
             <Doughnut options={options} data={chartData} width="900px" height="900px" />
         </div>
         <div>
             <a href="https://gml.noaa.gov/ccgg/about/co2_measurements.html">Data measurement description </a>
+        </div>
+        <div>
+            <a href="https://ourworldindata.org/uploads/2020/09/Global-GHG-Emissions-by-sector-based-on-WRI-2020.xlsx">Data used in chart (XLS file) </a>
         </div>
         <div>
             <p>This graph describes Fossil CO2 emissions by country (territorial)
