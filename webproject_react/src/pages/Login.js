@@ -31,7 +31,7 @@ export default function Login() {
         )
         .then(function (response) {
                 console.log(response);
-                navigate('/create');
+                navigate('/createview');
                 
             })
         .catch(function (error) {
@@ -72,8 +72,8 @@ export default function Login() {
                 </Form.Group>
             </Form>
             <div class="text-center">
-                <Button className="loginbtn" type="submit" disabled={!Validate()} onClick={handleSubmit}>Login</Button>
-            </div>
+                
+            </div><Button className="loginbtn" type="submit" disabled={!Validate()} onClick={handleSubmit}>Login</Button>
 
             <div>
                 <p className="loginpagetext">Don't have an account? <Link to="/CreateUser">Create one!</Link></p>

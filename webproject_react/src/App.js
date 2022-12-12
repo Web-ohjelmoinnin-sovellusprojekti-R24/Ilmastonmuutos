@@ -1,20 +1,24 @@
 import './App.css';
-import Login from './pages/Login';
-import CreateView from './pages/CreateView'
-import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
-import V5 from './visualizations/V5';
-import V9_try from './visualizations/v9_try';
-import V1_V2 from './visualizations/V1_V2';
-import V3 from './visualizations/V3';
-import Button from 'react-bootstrap/Button';
-import V6 from './visualizations/V6';
-import V7 from './visualizations/V7';
+import {Routes, Route} from "react-router-dom";
+
 import NavBar from './components/NavBar';
+
+import Login from './pages/Login';
 import CreateUser from './pages/CreateUser';
 import Settings from './pages/Settings';
 import Default1 from './pages/Default1';
 import Default2 from './pages/Default2';
 import MyViews from './pages/MyViews';
+import CreateViewHome from './pages/CreateViewHome';
+import CreateView1 from './pages/CreateView1'
+import CreateView2 from './pages/CreateView2'
+
+import V1_V2 from './visualizations/V1_V2';
+import V3 from './visualizations/V3';
+import V6 from './visualizations/V6';
+import V5 from './visualizations/V5';
+import V7 from './visualizations/V7';
+import V9_try from './visualizations/v9_try';
 
 
 function App() {
@@ -27,10 +31,12 @@ function App() {
         <NavBar/>
       
         <Routes>
-        <Route path="/" element={<CreateView/>}/>
+        <Route path="/" element={<CreateViewHome/>}/>
+        <Route path="/createview" element={<CreateViewHome/>}/>
+        <Route path='/createview1' element={<CreateView1/>}/>
+        <Route path='/createview2' element={<CreateView2/>}/>
         <Route path="/createuser" element={<CreateUser/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path='/create' element={<CreateView/>}/>
         <Route path="/settings" element={<Settings/>}/>
         <Route path="/myviews" element={<MyViews/>}/>
 
