@@ -45,7 +45,7 @@ export default function NavBar() {
     return (
         <Navbar expand="lg">
             <Navbar.Brand>
-                <p id="nav-dropdown">Create new view</p>
+                <a href="createview" id="nav-dropdown">Create new view</a>
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className='nav-link'>

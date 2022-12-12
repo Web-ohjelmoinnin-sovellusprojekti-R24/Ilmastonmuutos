@@ -1,6 +1,5 @@
 import './App.css';
 import Login from './pages/Login';
-import CreateView from './pages/CreateView'
 import {Routes, Route, BrowserRouter, Link} from "react-router-dom";
 import V5 from './visualizations/V5';
 import V1_V2 from './visualizations/V1_V2';
@@ -15,6 +14,9 @@ import Default1 from './pages/Default1';
 import Default2 from './pages/Default2';
 import MyViews from './pages/MyViews';
 import V8 from './visualizations/V8';
+import CreateViewHome from './pages/CreateViewHome';
+import CreateView1 from './pages/CreateView1'
+import CreateView2 from './pages/CreateView2'
 
 
 function App() {
@@ -27,10 +29,12 @@ function App() {
         <NavBar/>
       
         <Routes>
-        <Route path="/" element={<CreateView/>}/>
+        <Route path="/" element={<CreateViewHome/>}/>
+        <Route path="/createview" element={<CreateViewHome/>}/>
+        <Route path='/createview1' element={<CreateView1/>}/>
+        <Route path='/createview2' element={<CreateView2/>}/>
         <Route path="/createuser" element={<CreateUser/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path='/create' element={<CreateView/>}/>
         <Route path="/settings" element={<Settings/>}/>
         <Route path="/myviews" element={<MyViews/>}/>
 
