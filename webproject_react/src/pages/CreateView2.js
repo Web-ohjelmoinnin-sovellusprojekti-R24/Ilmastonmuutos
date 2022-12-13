@@ -10,6 +10,7 @@ import V3 from '../visualizations/V3'
 import V5 from '../visualizations/V5'
 import V6 from '../visualizations/V6'
 import V7 from '../visualizations/V7'
+import V9 from '../visualizations/V9'
 
 export default function CreateView2() {
 
@@ -29,6 +30,7 @@ export default function CreateView2() {
           v5: toggle5,
           v6: toggle6,
           v7: toggle7,
+          v9: toggle9,
         },
       }
     )
@@ -99,6 +101,15 @@ export default function CreateView2() {
     <V7 />
   )
 
+  //Visual 9
+  const [toggle9, setToggle9] = useState(false)
+  const toggler9 = () => {
+    toggle9 ? setToggle9(false) : setToggle9(true);
+  }
+  const Visual9 = () => (
+    <V9 />
+  )
+
 
   return (
     <div>
@@ -127,6 +138,10 @@ export default function CreateView2() {
         <label>V7</label>
         <input type="checkbox" onClick={toggler7} />
       </div>
+      <div>
+        <label>V9</label>
+        <input type="checkbox" onClick={toggler9} />
+      </div>
 
       <div>
         <button type="submit" onClick={handleSubmit} >Save</button>
@@ -148,6 +163,9 @@ export default function CreateView2() {
         </div>
         <div class="col-md-6" >
           {toggle7 ? <Visual7 /> : null}
+        </div>
+        <div class="col-md-6">
+          {toggle9 ? <Visual9 /> : null}
         </div>
       </div>
 

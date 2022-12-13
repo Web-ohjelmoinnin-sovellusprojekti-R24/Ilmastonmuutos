@@ -10,6 +10,7 @@ import V3 from '../visualizations/V3'
 import V5 from '../visualizations/V5'
 import V6 from '../visualizations/V6'
 import V7 from '../visualizations/V7'
+import V9 from '../visualizations/V9'
 
 
 export default function CreateView() {
@@ -20,7 +21,7 @@ export default function CreateView() {
     const URL = "http://localhost:8080/createview";
     function handleSubmit(event) {
         setsavemessage("Saved")
-        axios.post(URL, {   
+        axios.post(URL, {
         },
             {
                 params: {
@@ -30,13 +31,14 @@ export default function CreateView() {
                     v5: toggle5,
                     v6: toggle6,
                     v7: toggle7,
+                    v9: toggle9,
                 },
             }
         )
-        .then(function (response) {
+            .then(function (response) {
                 console.log(response);
             })
-        .catch(function (error) {
+            .catch(function (error) {
                 console.log(error);
             })
         event.preventDefault();
@@ -45,9 +47,9 @@ export default function CreateView() {
     //Visual 1 and 2
     const [toggle, setToggle] = useState(false)
     const toggler = () => {
-        toggle ? setToggle(false): setToggle(true);
+        toggle ? setToggle(false) : setToggle(true);
         setSuccessMessage("");
-    } 
+    }
     const [V1text, setV1text] = useState("")
     const [successMessage, setSuccessMessage] = useState("");
     const V1Save = () => {
@@ -57,50 +59,58 @@ export default function CreateView() {
     }
     const Visual1 = () => (
         <div>
-            <V1/>
+            <V1 />
             <input type="text" id="v1input" placeholder="TEXT" />
             <button onClick={V1Save}>Save</button>
             <p>{successMessage}</p>
         </div>
     )
-    
+
     //Visual 3 and 4
     const [toggle3, setToggle3] = useState(false)
     const toggler3 = () => {
-        toggle3 ? setToggle3(false): setToggle3(true);
-    } 
+        toggle3 ? setToggle3(false) : setToggle3(true);
+    }
     const Visual3 = () => (
-            <V3/>
+        <V3 />
     )
 
     //Visual 5
     const [toggle5, setToggle5] = useState(false)
     const toggler5 = () => {
-        toggle5 ? setToggle5(false): setToggle5(true);
-    } 
+        toggle5 ? setToggle5(false) : setToggle5(true);
+    }
     const Visual5 = () => (
-        <V5/>
+        <V5 />
     )
 
     //Visual 6
     const [toggle6, setToggle6] = useState(false)
     const toggler6 = () => {
-        toggle6 ? setToggle6(false): setToggle6(true);
-    } 
+        toggle6 ? setToggle6(false) : setToggle6(true);
+    }
     const Visual6 = () => (
-        <V6/>
+        <V6 />
     )
 
     //Visual 7
     const [toggle7, setToggle7] = useState(false)
     const toggler7 = () => {
-        toggle7 ? setToggle7(false): setToggle7(true);
-    } 
+        toggle7 ? setToggle7(false) : setToggle7(true);
+    }
     const Visual7 = () => (
-        <V7/>
+        <V7 />
     )
 
-    
+    //Visual 9
+    const [toggle9, setToggle9] = useState(false)
+    const toggler9 = () => {
+        toggle9 ? setToggle9(false) : setToggle9(true);
+    }
+    const Visual9 = () => (
+        <V9 />
+    )
+
     return (
         <div>
             <p>Create new view</p>
@@ -110,7 +120,7 @@ export default function CreateView() {
 
             <div>
                 <label>V1</label>
-                    <input type="checkbox" onClick={toggler} />
+                <input type="checkbox" onClick={toggler} />
             </div>
             <div>
                 <label>V3</label>
@@ -128,12 +138,16 @@ export default function CreateView() {
                 <label>V7</label>
                 <input type="checkbox" onClick={toggler7} />
             </div>
+            <div>
+                <label>V9</label>
+                <input type="checkbox" onClick={toggler9} />
+            </div>
 
             <div>
                 <button type="submit" onClick={handleSubmit} >Save</button>
                 <p>{savemessage}</p>
             </div>
-            
+
             <div>
                 {toggle ? <Visual1 /> : null}
             </div>
@@ -148,6 +162,9 @@ export default function CreateView() {
             </div>
             <div>
                 {toggle7 ? <Visual7 /> : null}
+            </div>
+            <div>
+                {toggle9 ? <Visual9 /> : null}
             </div>
         </div>
     )
