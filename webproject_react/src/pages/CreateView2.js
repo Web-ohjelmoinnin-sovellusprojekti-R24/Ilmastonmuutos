@@ -23,6 +23,7 @@ export default function CreateView2() {
     },
       {
         params: {
+          layout: 2,
           v1: toggle,
           v3: toggle3,
           v5: toggle5,
@@ -51,7 +52,7 @@ export default function CreateView2() {
   const V1Save = () => {
     setV1text(document.getElementById('v1input').value)
     //console.log("users value is: " + V1text);
-    setSuccessMessage("Saved")
+    setSuccessMessage("Saved to My views!")
   }
   const Visual1 = () => (
     <div>

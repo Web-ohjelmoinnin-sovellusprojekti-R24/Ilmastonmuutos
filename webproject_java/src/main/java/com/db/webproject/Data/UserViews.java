@@ -13,35 +13,25 @@ public class UserViews {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int UserViewsID;
     private int Layout;
-    private String VisualizationType;
     private boolean V1;
     private boolean V3;
     private boolean V5;
     private boolean V6;
     private boolean V7;
-    private boolean V8;
-    private boolean V9;
-
-    @Column(name="username")
-    public String UserID;
+    @Column(name = "username")
+    private String UserID;
 
     public UserViews() {
     }
 
-    public UserViews(int UserViewsID, int Layout, String VisualizationType, boolean V1, boolean V3, boolean V5, boolean V6, boolean V7, boolean V8, boolean V9, String UserID) {
-        this.UserViewsID = UserViewsID;
+    public UserViews(int Layout, boolean V1, boolean V3, boolean V5, boolean V6, boolean V7) {
         this.Layout = Layout;
-        this.VisualizationType = VisualizationType;
         this.V1 = V1;
         this.V3 = V3;
         this.V5 = V5;
         this.V6 = V6;
         this.V7 = V7;
-        this.V8 = V8;
-        this.V9 = V9;
-        this.UserID = UserID;
-        
-
+    
     }
 
 
@@ -60,14 +50,6 @@ public class UserViews {
 
     public void setLayout(int Layout) {
         this.Layout = Layout;
-    }
-
-    public String getVisualizationType() {
-        return this.VisualizationType;
-    }
-
-    public void setVisualizationType(String VisualizationType) {
-        this.VisualizationType = VisualizationType;
     }
 
     public boolean isV1() {
@@ -129,31 +111,7 @@ public class UserViews {
     public void setV7(boolean V7) {
         this.V7 = V7;
     }
-
-    public boolean isV8() {
-        return this.V8;
-    }
-
-    public boolean getV8() {
-        return this.V8;
-    }
-
-    public void setV8(boolean V8) {
-        this.V8 = V8;
-    }
-
-    public boolean isV9() {
-        return this.V9;
-    }
-
-    public boolean getV9() {
-        return this.V9;
-    }
-
-    public void setV9(boolean V9) {
-        this.V9 = V9;
-    }
-
+    
     public String getUserID() {
         return this.UserID;
     }

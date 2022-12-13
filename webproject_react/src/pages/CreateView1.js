@@ -24,6 +24,7 @@ export default function CreateView() {
         },
             {
                 params: {
+                    layout: 1,
                     v1: toggle,
                     v3: toggle3,
                     v5: toggle5,

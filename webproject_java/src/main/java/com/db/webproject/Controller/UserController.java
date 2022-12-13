@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.db.webproject.Data.UserViews;
 import com.db.webproject.Data.Users;
+import com.db.webproject.Service.UserViewsService;
 import com.db.webproject.Service.UsersService;
 
 @RestController
@@ -22,6 +24,9 @@ public class UserController {
 
     @Autowired
     UsersService serv;
+
+    @Autowired
+    UserViewsService view;
 
     @PostMapping("register")
     public ResponseEntity<String> register(@RequestParam String username, @RequestParam String password){
@@ -56,8 +61,14 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // @PostMapping("createview"){
-    //     public ResponseEntity<String> createUser(@Requestparam)
-    // }
+    @PostMapping("createview")
+        public ResponseEntity<String> createUser(@RequestParam int layout, @RequestParam boolean v1, @RequestParam boolean v3, @RequestParam boolean v5, @RequestParam boolean v6, @RequestParam boolean v7){
+            return new ResponseEntity<>(HttpStatus.OK);
+    }
 
+    // @DeleteMapping("delete"){
+    //     public ResponseEntity<String> deleteView(){
+
+    //     }
+    // }
 }
