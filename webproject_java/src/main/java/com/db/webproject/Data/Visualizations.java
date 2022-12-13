@@ -36,6 +36,7 @@ public class Visualizations {
     @Column(name = "sector")
     private  String sector;
     @Column(name = "sub_percent")
+<<<<<<< Updated upstream
     private  BigDecimal sub_percent;
     @Column(name = "sector_percent")
     private  BigDecimal sector_percent;
@@ -480,11 +481,24 @@ public class Visualizations {
     @Column (name="anguilla")
     private BigDecimal anguilla;
 
+=======
+    private BigDecimal sub_percent;
+    @Column(name = "sub_sector")
+    private String sub_sector;
+    @Column(name = "tooltip_description")
+    private String tooltip_description;
+    @Column(name = "date_v10")
+    private String date_v10;
+>>>>>>> Stashed changes
 
     public Visualizations() {
     }
 
+<<<<<<< Updated upstream
     public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, String sub_sector, String sector, BigDecimal sub_percent, BigDecimal sector_percent, BigDecimal afghanistan, BigDecimal albania, BigDecimal algeria, BigDecimal andorra, BigDecimal angola, BigDecimal antigua_and_barbuda, BigDecimal argentina, BigDecimal armenia, BigDecimal aruba, BigDecimal australia, BigDecimal austria, BigDecimal azerbaijan, BigDecimal bahamas, BigDecimal bahrain, BigDecimal bangladesh, BigDecimal barbados, BigDecimal belarus, BigDecimal belgium, BigDecimal belize, BigDecimal benin, BigDecimal bermuda, BigDecimal bhutan, BigDecimal bonaire__saint_eustatius_and_saba, BigDecimal bosnia_and_herzegovina, BigDecimal botswana, BigDecimal brazil, BigDecimal british_virgin_islands, BigDecimal brunei_darussalam, BigDecimal bulgaria, BigDecimal burkina_faso, BigDecimal burundi, BigDecimal cambodia, BigDecimal canada, BigDecimal cape_verde, BigDecimal central_african_republic, BigDecimal chad, BigDecimal chile, BigDecimal china, BigDecimal colombia, BigDecimal comoros, BigDecimal congo, BigDecimal cook_islands, BigDecimal costa_rica, BigDecimal côte_divoire, BigDecimal croatia, BigDecimal cuba, BigDecimal curaçao, BigDecimal cyprus, BigDecimal czech_republic, BigDecimal north_korea, BigDecimal democratic_republic_of_the_congo, BigDecimal denmark, BigDecimal djibouti, BigDecimal dominica, BigDecimal dominican_republic, BigDecimal ecuador, BigDecimal egypt, BigDecimal el_salvador, BigDecimal equatorial_guinea, BigDecimal eritrea, BigDecimal estonia, BigDecimal ethiopia, BigDecimal faeroe_islands, BigDecimal micronesia, BigDecimal fiji, BigDecimal finland, BigDecimal france, BigDecimal french_guiana, BigDecimal french_polynesia, BigDecimal gabon, BigDecimal gambia, BigDecimal georgia, BigDecimal germany, BigDecimal ghana, BigDecimal greece, BigDecimal greenland, BigDecimal grenada, BigDecimal guadeloupe, BigDecimal guatemala, BigDecimal guinea, BigDecimal guinea_bissau, BigDecimal guyana, BigDecimal haiti, BigDecimal honduras, BigDecimal hong_kong, BigDecimal hungary, BigDecimal iceland, BigDecimal india, BigDecimal indonesia, BigDecimal iran, BigDecimal iraq, BigDecimal ireland, BigDecimal israel, BigDecimal italy, BigDecimal jamaica, BigDecimal japan, BigDecimal jordan, BigDecimal kazakhstan, BigDecimal kenya, BigDecimal kiribati, BigDecimal kuwait, BigDecimal kosovo, BigDecimal kyrgyzstan, BigDecimal laos, BigDecimal latvia, BigDecimal lebanon, BigDecimal lesotho, BigDecimal liberia, BigDecimal libya, BigDecimal liechtenstein, BigDecimal lithuania, BigDecimal luxembourg, BigDecimal macao, BigDecimal north_macedonia, BigDecimal madagascar, BigDecimal malawi, BigDecimal malaysia, BigDecimal maldives, BigDecimal mali, BigDecimal malta, BigDecimal marshall_islands, BigDecimal martinique, BigDecimal mauritania, BigDecimal mauritius, BigDecimal mayotte, BigDecimal mexico, BigDecimal mongolia, BigDecimal montenegro, BigDecimal montserrat, BigDecimal morocco, BigDecimal mozambique, BigDecimal myanmar, BigDecimal namibia, BigDecimal nauru, BigDecimal nepal, BigDecimal netherlands, BigDecimal new_caledonia, BigDecimal new_zealand, BigDecimal nicaragua, BigDecimal niger, BigDecimal nigeria, BigDecimal niue, BigDecimal norway, BigDecimal occupied_palestinian_territory, BigDecimal oman, BigDecimal pakistan, BigDecimal palau, BigDecimal panama, BigDecimal papua_new_guinea, BigDecimal paraguay, BigDecimal peru, BigDecimal philippines, BigDecimal bolivia, BigDecimal poland, BigDecimal portugal, BigDecimal qatar, BigDecimal cameroon, BigDecimal south_korea, BigDecimal moldova, BigDecimal south_sudan, BigDecimal réunion, BigDecimal sudan, BigDecimal romania, BigDecimal russian_federation, BigDecimal rwanda, BigDecimal saint_helena, BigDecimal saint_lucia, BigDecimal sint_maarten_dutch_part, BigDecimal samoa, BigDecimal sao_tome_and_principe, BigDecimal saudi_arabia, BigDecimal senegal, BigDecimal serbia, BigDecimal seychelles, BigDecimal sierra_leone, BigDecimal singapore, BigDecimal slovakia, BigDecimal slovenia, BigDecimal solomon_islands, BigDecimal somalia, BigDecimal south_africa, BigDecimal spain, BigDecimal sri_lanka, BigDecimal saint_kitts_and_nevis, BigDecimal saint_pierre_and_miquelon, BigDecimal saint_vincent_and_the_grenadines, BigDecimal suriname, BigDecimal swaziland, BigDecimal sweden, BigDecimal switzerland, BigDecimal syria, BigDecimal taiwan, BigDecimal tajikistan, BigDecimal thailand, BigDecimal togo, BigDecimal tonga, BigDecimal trinidad_and_tobago, BigDecimal tunisia, BigDecimal turkey, BigDecimal turkmenistan, BigDecimal timor_leste, BigDecimal tuvalu, BigDecimal turks_and_caicos_islands, BigDecimal uganda, BigDecimal ukraine, BigDecimal united_arab_emirates, BigDecimal united_kingdom, BigDecimal tanzania, BigDecimal usa, BigDecimal uruguay, BigDecimal uzbekistan, BigDecimal vanuatu, BigDecimal venezuela, BigDecimal viet_nam, BigDecimal wallis_and_futuna_islands, BigDecimal yemen, BigDecimal zambia, BigDecimal zimbabwe, float year, BigDecimal anguilla) {
+=======
+    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, BigDecimal de08, BigDecimal de08_2, BigDecimal dss, BigDecimal vostok, BigDecimal co2, BigDecimal temp, String sector, BigDecimal sector_percent, BigDecimal sub_percent, String sub_sector, String tooltip_description, String date_v10) {
+>>>>>>> Stashed changes
         this.id = id;
         this.date = date;
         this.time_type = time_type;
@@ -497,6 +511,7 @@ public class Visualizations {
         this.sub_sector = sub_sector;
         this.sector = sector;
         this.sub_percent = sub_percent;
+<<<<<<< Updated upstream
         this.sector_percent = sector_percent;
         this.afghanistan = afghanistan;
         this.albania = albania;
@@ -718,6 +733,11 @@ public class Visualizations {
         this.zimbabwe = zimbabwe;
         this.year = year;
         this.anguilla = anguilla;
+=======
+        this.sub_sector = sub_sector;
+        this.tooltip_description = tooltip_description;
+        this.date_v10 = date_v10;
+>>>>>>> Stashed changes
     }
 
     public Integer getId() {
@@ -872,8 +892,30 @@ public class Visualizations {
         this.antigua_and_barbuda = antigua_and_barbuda;
     }
 
+<<<<<<< Updated upstream
     public BigDecimal getArgentina() {
         return this.argentina;
+=======
+    public String getTooltip_description() {
+        return this.tooltip_description;
+    }
+
+    public void setTooltip_description(String tooltip_description) {
+        this.tooltip_description = tooltip_description;
+    }
+
+    public String getDate_v10() {
+        return this.date_v10;
+    }
+
+    public void setDate_v10(String date_v10) {
+        this.date_v10 = date_v10;
+    }
+
+    public Visualizations id(Integer id) {
+        setId(id);
+        return this;
+>>>>>>> Stashed changes
     }
 
     public void setArgentina(BigDecimal argentina) {
@@ -948,6 +990,7 @@ public class Visualizations {
         return this.barbados;
     }
 
+<<<<<<< Updated upstream
     public void setBarbados(BigDecimal barbados) {
         this.barbados = barbados;
     }
@@ -2586,3 +2629,19 @@ public class Visualizations {
         
 
 }
+=======
+    public Visualizations tooltip_description(String tooltip_description) {
+        setTooltip_description(tooltip_description);
+        return this;
+    }
+
+    public Visualizations date_v10(String date_v10) {
+        setDate_v10(date_v10);
+        return this;
+    }
+
+    }
+
+
+    
+>>>>>>> Stashed changes

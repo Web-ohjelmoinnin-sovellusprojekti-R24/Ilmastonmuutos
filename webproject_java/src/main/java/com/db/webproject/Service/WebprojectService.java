@@ -26,4 +26,32 @@ public class WebprojectService {
     public List<BigDecimal> getNorthernData(){
         return v1Repository.getNothernData();
     }
+<<<<<<< Updated upstream
+=======
+
+    public List<Visualizations> getV5Data(){
+        return v1Repository.getV5Data();
+      }
+      public List<Visualizations> getV3andV4Data(){
+        return v1Repository.getV3andV4data();
+      }
+
+      public List<Visualizations> getV6Data(){
+        return v1Repository.getV6Data();
+    }
+
+    public List<Visualizations> getV7Data(){
+        return v1Repository.getV7Data();
+    }
+
+    public List<Visualizations> getV1V2Data(){
+        return v1Repository.getV1andV2data();
+    }
+    public List<Visualizations> getV9Data(){
+        return v1Repository.getV9Data();
+    }
+    public List<Visualizations> getV10Data(){
+        return v1Repository.getV10Data();
+    }
+>>>>>>> Stashed changes
 }

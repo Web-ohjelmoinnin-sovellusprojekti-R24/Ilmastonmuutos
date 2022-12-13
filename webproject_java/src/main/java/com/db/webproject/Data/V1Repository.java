@@ -20,4 +20,14 @@ public interface V1Repository extends JpaRepository<Visualizations, Integer> {
     @Query(value="SELECT northernd FROM visualizations", nativeQuery = true)
     List<BigDecimal> getNothernData();
    
+<<<<<<< Updated upstream
+=======
+    @Query(value="SELECT * FROM visualizations where time_type='V6'", nativeQuery = true)
+    List<Visualizations> getV6Data();
+
+    @Query(value="SELECT * FROM visualizations where time_type='V9' OR time_type='V9SS'", nativeQuery = true)
+    List<Visualizations> getV9Data();
+    @Query(value="SELECT * FROM visualizations WHERE time_type = 'V3A' or time_type = 'V3M' or time_type = 'V4A' or time_type='V10'", nativeQuery = true)
+    List<Visualizations> getV10Data();
+>>>>>>> Stashed changes
 }

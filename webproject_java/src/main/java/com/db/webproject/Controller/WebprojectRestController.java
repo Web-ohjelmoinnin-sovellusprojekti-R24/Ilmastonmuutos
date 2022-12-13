@@ -47,4 +47,31 @@ public class WebprojectRestController {
         return UserService.getData();
     }
 
+<<<<<<< Updated upstream
+=======
+    @GetMapping("getv6data")
+    public List<Visualizations> getV6Data(){
+        return webprojectService.getV6Data();
+    }
+
+    @GetMapping("getv7data")
+    public List<Visualizations> getV7Data(){
+        return webprojectService.getV7Data();
+    }
+
+    @GetMapping("getv1v2data")
+    public List<Visualizations> getv1v2Data(){
+        return webprojectService.getV1V2Data();
+    }
+
+    @GetMapping("getv9data")
+    public List<Visualizations> getv9Data(){
+        return webprojectService.getV9Data();
+
+    }
+    @GetMapping("getv10data")
+    public List<Visualizations> getv10Data(){
+        return webprojectService.getV10Data();
+    }
+>>>>>>> Stashed changes
 }
