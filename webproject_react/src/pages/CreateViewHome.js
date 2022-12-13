@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 export default function CreateViewHome() {
   return (
-    <div>CreateViewHome
+    <div className='layouttext'>CreateViewHome
             <div>
-                <p><Link to="/createview1">Layout1</Link></p>
+                <p className='layouttext'><Link to="/createview1">Layout1</Link></p>
             </div>
             <div>
-                <p><Link to="/createview2">Layout2</Link></p>
+                <p className='layouttext'><Link to="/createview2">Layout2</Link></p>
             </div>
     </div>
   )

@@ -113,33 +113,33 @@ export default function CreateView2() {
 
   return (
     <div>
-      <p>Create new view</p>
+      <p className='layouttext'>Create new view</p>
       <div>
-        <p><Link to="/createview1">Layout1</Link>/Layout2</p>
+        <p className='layouttext'><Link to="/createview1">Layout1</Link>/Layout2</p>
       </div>
 
       <div>
-        <label>V1</label>
+        <label className="labeltext">V1</label>
         <input type="checkbox" onClick={toggler} />
       </div>
       <div>
-        <label>V3</label>
+        <label className="labeltext">V3</label>
         <input type="checkbox" onClick={toggler3} />
       </div>
       <div>
-        <label>V5</label>
+        <label className="labeltext">V5</label>
         <input type="checkbox" onClick={toggler5} />
       </div>
       <div>
-        <label>V6</label>
+        <label className="labeltext">V6</label>
         <input type="checkbox" onClick={toggler6} />
       </div>
       <div>
-        <label>V7</label>
+        <label className="labeltext">V7</label>
         <input type="checkbox" onClick={toggler7} />
       </div>
       <div>
-        <label>V9</label>
+        <label className="labeltext">V9</label>
         <input type="checkbox" onClick={toggler9} />
       </div>
 

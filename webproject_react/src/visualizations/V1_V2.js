@@ -91,7 +91,7 @@ export default function V1() {
         plugins: {
             title: {
                 display: true,
-                text: 'Temperature anomalies form 1850'
+                text: 'Temperature anomalies from 1850'
             }
         },
         scales: {
