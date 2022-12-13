@@ -18,19 +18,22 @@ public class UserViews {
     private boolean V5;
     private boolean V6;
     private boolean V7;
+    private boolean V9;
+
     @Column(name = "username")
     private String UserID;
 
     public UserViews() {
     }
 
-    public UserViews(int Layout, boolean V1, boolean V3, boolean V5, boolean V6, boolean V7) {
+    public UserViews(int Layout, boolean V1, boolean V3, boolean V5, boolean V6, boolean V7, boolean V9) {
         this.Layout = Layout;
         this.V1 = V1;
         this.V3 = V3;
         this.V5 = V5;
         this.V6 = V6;
         this.V7 = V7;
+        this.V9 = V9;
     
     }
 
@@ -120,5 +123,12 @@ public class UserViews {
         this.UserID = UserID;
     }
 
+    public boolean getV9() {
+        return this.V9;
+    }
+
+    public void setV9(boolean V9) {
+        this.V9 = V9;
+    }
 
 }

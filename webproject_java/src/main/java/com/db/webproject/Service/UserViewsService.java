@@ -12,14 +12,14 @@ public class UserViewsService {
     @Autowired
     UserViewRepository userViewRepository;
 
-    public UserViews create(int layout, boolean v1, boolean v3, boolean v5, boolean v6, boolean v7){
+    public UserViews create(int layout, boolean v1, boolean v3, boolean v5, boolean v6, boolean v7, boolean v9){
 
-        UserViews u = new UserViews(layout, v1, v3, v5, v6, v7);
+        UserViews u = new UserViews(layout, v1, v3, v5, v6, v7, v9);
         userViewRepository.save(u);
         return u;
     }
 
-    public void delete(int layout, boolean v1, boolean v3, boolean v5, boolean v6, boolean v7){
+    public void delete(int layout, boolean v1, boolean v3, boolean v5, boolean v6, boolean v7, boolean v9){
         userViewRepository.deleteAll();
     }
     

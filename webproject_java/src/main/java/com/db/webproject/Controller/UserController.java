@@ -62,7 +62,8 @@ public class UserController {
     }
 
     @PostMapping("createview")
-        public ResponseEntity<String> createUser(@RequestParam int layout, @RequestParam boolean v1, @RequestParam boolean v3, @RequestParam boolean v5, @RequestParam boolean v6, @RequestParam boolean v7){
+        public ResponseEntity<String> createUser(@RequestParam int layout, @RequestParam boolean v1, @RequestParam boolean v3, @RequestParam boolean v5, @RequestParam boolean v6, @RequestParam boolean v7, @RequestParam boolean v9){
+            view.create(layout, v1, v3, v5, v6, v7, v9);
             return new ResponseEntity<>(HttpStatus.OK);
     }
 
