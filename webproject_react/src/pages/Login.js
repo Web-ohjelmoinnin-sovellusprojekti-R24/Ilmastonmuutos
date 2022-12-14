@@ -14,7 +14,7 @@ export default function Login() {
     const navigate = useNavigate();
 
     function Validate() {
-        return user.length > 0 && pass.length > 0;
+        return user.length > 0  && pass.length > 0;
     }
 
 
