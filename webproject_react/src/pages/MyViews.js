@@ -7,9 +7,9 @@ import axios from "axios";
 
 export default function MyViews() {
 
-  const URL = "http://localhost:8080/views";
+  const URL = "/views";
   const instance = axios.create({
-    baseURL: 'http://localhost:8080/views'
+    baseURL: '/views'
   });
   const storedJwt = sessionStorage.getItem('token');
   instance.defaults.headers.common['Authorization'] = `Bearer ${storedJwt}`;

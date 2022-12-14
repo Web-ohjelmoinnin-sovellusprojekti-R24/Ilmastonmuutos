@@ -5,13 +5,13 @@ import {Button, Form, Col, Row, Container} from 'react-bootstrap';
 
 export default function Settings() {
 
-    const URL = "http://localhost:8080/delete";
+    const URL = "/delete";
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
 
     function handleSubmit(event){
-        axios.delete(`http://localhost:8080/delete/`+user+"/"+pass)       
+        axios.delete(`/delete/`+user+"/"+pass)       
     .then(function (response) {
         console.log(response);
         if(response.status == 200){

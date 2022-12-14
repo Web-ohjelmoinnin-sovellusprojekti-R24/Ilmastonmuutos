@@ -14,7 +14,7 @@ import { CategoryScale, LinearScale, PointElement, LineElement, Title } from 'ch
 export default function V6() {
 
     //set time data
-    const URL = "http://127.0.0.1:8080/getv6data"
+    const URL = "/getv6data"
     
     const [data, setData] = useState();
     useEffect(() => {

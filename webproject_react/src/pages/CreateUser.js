@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function CreateUser() {
 
-    const URL = "http://localhost:8080/register";
+    const URL = "/register";
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
     const [successMessage, setSuccessMessage] = useState("");

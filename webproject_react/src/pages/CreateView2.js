@@ -17,7 +17,7 @@ export default function CreateView2() {
   const [savemessage, setsavemessage] = useState("")
 
   //Sending the post request with params
-  const URL = "http://localhost:8080/createview";
+  const URL = "/createview";
   function handleSubmit(event) {
     setsavemessage("Saved")
     axios.post(URL, {

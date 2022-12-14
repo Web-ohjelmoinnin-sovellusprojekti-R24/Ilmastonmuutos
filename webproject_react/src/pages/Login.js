@@ -7,7 +7,7 @@ import axios from "axios";
 
 
 export default function Login() {
-    const URL = "http://localhost:8080/login";
+    const URL = "/login";
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
     const [errorMessage, seterrorMessage] = useState("")

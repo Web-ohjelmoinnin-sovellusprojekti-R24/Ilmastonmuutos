@@ -7,7 +7,7 @@ import { Line } from 'react-chartjs-2';
 
 export default function V5(){
 
-    const URL = "http://127.0.0.1:8080/getv5data"
+    const URL = "/getv5data"
 
     const [data, setData] = useState();
     useEffect(() => {
