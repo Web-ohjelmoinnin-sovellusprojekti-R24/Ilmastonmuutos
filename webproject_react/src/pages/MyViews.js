@@ -11,6 +11,7 @@ export default function MyViews() {
   const instance = axios.create({
     baseURL: 'http://localhost:8080/views'
   });
+  //tokenin tarkistus
   const storedJwt = sessionStorage.getItem('token');
   instance.defaults.headers.common['Authorization'] = `Bearer ${storedJwt}`;
   useEffect(() => {

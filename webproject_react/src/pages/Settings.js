@@ -10,8 +10,10 @@ export default function Settings() {
     const [pass, setPass] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
 
+    //funktio, joka lähettää backendille poistettavan käyttäjän tiedot
     function handleSubmit(event){
-        axios.delete(`http://localhost:8080/delete/`+user+"/"+pass)       
+        axios.delete(`http://localhost:8080/delete/`+user+"/"+pass)
+        //response, joka kertoo että käyttäjä on poistettu onnistuneesti       
     .then(function (response) {
         console.log(response);
         if(response.status == 200){
@@ -24,6 +26,8 @@ export default function Settings() {
     event.preventDefault();
     }
 
+
+    //form joka lähettää handleSubmit-funktiolle käyttäjän tiedot
 return (
     <div>
        <Form>

@@ -9,7 +9,7 @@ import { Chart } from 'chart.js';
 
 export default function V() {
 
-    //set time data
+ 
     const URL = "http://127.0.0.1:8080/getv9data"
 
     const [data, setData] = useState();
@@ -26,7 +26,7 @@ export default function V() {
 
     }, [])
 
-    //chart data
+
     const chartData = {
           labels: [
     'Energy',

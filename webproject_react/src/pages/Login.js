@@ -13,11 +13,12 @@ export default function Login() {
     const [errorMessage, seterrorMessage] = useState("")
     const navigate = useNavigate();
 
+    //funktio joka määrittää, että käyttäjänimessä ja salasanassa täytyy olla enemmän kuin nolla kirjainta tai numeroa
     function Validate() {
         return user.length > 0  && pass.length > 0;
     }
 
-
+    //funktio joka lähettää käyttäjän tiedot backendille
     function handleSubmit(event) {
         axios.post(URL, {
             
@@ -29,12 +30,14 @@ export default function Login() {
                 },
             }
         )
+        //response, joka ohjaa etusivulle, jos käyttäjälle kirjauduttiin onnistuneesti
         .then(function (response) {
                 console.log(response);
                 sessionStorage.setItem("token", response.data);
                 navigate('/createview');
                 
             })
+        //error response, joka kertoo, jos käyttäjänimi tai salasana on väärin
         .catch(function (error) {
                 if (error.response.status === 401) {
                     seterrorMessage("Wrong username or password");
@@ -46,9 +49,9 @@ export default function Login() {
         
 
     }
+    //form, joka nappia painaessa lähettää handleSubmit-funktiolle käyttäjän kirjoittamat tiedot
     return (
         <div>
-
             <Form onSubmit={handleSubmit}>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>

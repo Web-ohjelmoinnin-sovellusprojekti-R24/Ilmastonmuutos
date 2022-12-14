@@ -16,6 +16,7 @@ export default function CreateUser() {
         return user.length > 0 && pass.length > 0;
     }
 
+    //funktio, joka lähettää backendille uuden käyttäjätunnuksen tiedot
     function handleSubmit(event) {
         axios.post(URL, {
         },
@@ -26,18 +27,19 @@ export default function CreateUser() {
                 },
             }
         )
+        // vastaus, joka kertoo käyttäjälle onko käyttäjätunnus luotu onnistuneesti
             .then(function (response) {
                 console.log(response);
                 if(response.status == 200){
                     setSuccessMessage("User created successfully!");
                 }
-                //navigate('/Login');
             })
             .catch(function (error) {
                 console.log(error);
             })
         event.preventDefault();
     }
+    //form, joka nappia painaessa lähettää handleSubmit-funktiolle käyttäjän kirjoittamat tiedot
     return (
         <div>
             <Form onSubmit={handleSubmit}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import V9 from '../visualizations/V9';
 
-
+//kuvaajan V8 default näkymä, jota ei voi muokata
 export default function Default2() {
   return (
     <div>

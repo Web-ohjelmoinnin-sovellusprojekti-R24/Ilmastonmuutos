@@ -12,7 +12,6 @@ import { Chart } from 'chart.js';
 
 export default function V1() {
 
-    //set time data
     const URL = "http://127.0.0.1:8080/getv3andv4data"
 
     const [data, setData] = useState();
@@ -29,7 +28,6 @@ export default function V1() {
 
     }, [])
 
-    //chart data
     const chartData = {
         labels: data && data.map(d => d.date),
         datasets: [
@@ -77,8 +75,7 @@ export default function V1() {
 
         ]
     };
-   
-    //options
+
     const options = {
         responsive: true,
         maintainAspectRatio: false,

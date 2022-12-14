@@ -5,7 +5,7 @@ import V5 from '../visualizations/V5'
 import V6 from '../visualizations/V6'
 import V7 from '../visualizations/V7'
 
-
+//kuvaajien V1-V9 default näkymä, jota ei voi muokata
 export default function Default1() {
   return (
     <div>

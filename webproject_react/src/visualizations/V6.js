@@ -13,7 +13,7 @@ import { CategoryScale, LinearScale, PointElement, LineElement, Title } from 'ch
 
 export default function V6() {
 
-    //set time data
+
     const URL = "http://127.0.0.1:8080/getv6data"
     
     const [data, setData] = useState();
@@ -31,7 +31,7 @@ export default function V6() {
 
     }, [])
     
-    //chart data
+
     const chartData = {
 
         labels: data && data.map(d => d.date),
@@ -47,7 +47,7 @@ export default function V6() {
         ]
     };
     
-    //options
+ 
     const options = {
         responsive: true,
         maintainAspectRatio: false,

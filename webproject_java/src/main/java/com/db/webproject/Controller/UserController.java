@@ -67,9 +67,5 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // @DeleteMapping("delete"){
-    //     public ResponseEntity<String> deleteView(){
 
-    //     }
-    // }
 }
