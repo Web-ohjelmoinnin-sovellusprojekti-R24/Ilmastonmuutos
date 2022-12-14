@@ -43,11 +43,20 @@ public class Visualizations {
     private BigDecimal co2;
     @Column(name = "temp")
     private BigDecimal temp;
+    @Column(name = "sector")
+    private String sector;
+    @Column(name = "sector_percent")
+    private BigDecimal sector_percent;
+    @Column(name = "sub_percent")
+    private BigDecimal sub_percent;
+    @Column(name = "sub_sector")
+    private String sub_sector;
+
 
     public Visualizations() {
     }
 
-    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, BigDecimal de08, BigDecimal de08_2, BigDecimal dss, BigDecimal vostok, BigDecimal co2, BigDecimal temp) {
+    public Visualizations(Integer id, String date, String time_type, BigDecimal globald, BigDecimal northernd, BigDecimal southernd, BigDecimal globalc, BigDecimal annualavg, BigDecimal monthlyavg, BigDecimal de08, BigDecimal de08_2, BigDecimal dss, BigDecimal vostok, BigDecimal co2, BigDecimal temp, String sector, BigDecimal sector_percent, BigDecimal sub_percent, String sub_sector) {
         this.id = id;
         this.date = date;
         this.time_type = time_type;
@@ -63,6 +72,10 @@ public class Visualizations {
         this.vostok = vostok;
         this.co2 = co2;
         this.temp = temp;
+        this.sector = sector;
+        this.sector_percent = sector_percent;
+        this.sub_percent = sub_percent;
+        this.sub_sector = sub_sector;
     }
 
     public Integer getId() {
@@ -185,4 +198,132 @@ public class Visualizations {
         this.temp = temp;
     }
 
+    public String getSector() {
+        return this.sector;
+    }
+
+    public void setSector(String sector) {
+        this.sector = sector;
+    }
+
+    public BigDecimal getSector_percent() {
+        return this.sector_percent;
+    }
+
+    public void setSector_percent(BigDecimal sector_percent) {
+        this.sector_percent = sector_percent;
+    }
+
+    public BigDecimal getSub_percent() {
+        return this.sub_percent;
+    }
+
+    public void setSub_percent(BigDecimal sub_percent) {
+        this.sub_percent = sub_percent;
+    }
+
+    public String getSub_sector() {
+        return this.sub_sector;
+    }
+
+    public void setSub_sector(String sub_sector) {
+        this.sub_sector = sub_sector;
+    }
+
+    public Visualizations id(Integer id) {
+        setId(id);
+        return this;
+    }
+
+    public Visualizations date(String date) {
+        setDate(date);
+        return this;
+    }
+
+    public Visualizations time_type(String time_type) {
+        setTime_type(time_type);
+        return this;
+    }
+
+    public Visualizations globald(BigDecimal globald) {
+        setGlobald(globald);
+        return this;
+    }
+
+    public Visualizations northernd(BigDecimal northernd) {
+        setNorthernd(northernd);
+        return this;
+    }
+
+    public Visualizations southernd(BigDecimal southernd) {
+        setSouthernd(southernd);
+        return this;
+    }
+
+    public Visualizations globalc(BigDecimal globalc) {
+        setGlobalc(globalc);
+        return this;
+    }
+
+    public Visualizations annualavg(BigDecimal annualavg) {
+        setAnnualavg(annualavg);
+        return this;
+    }
+
+    public Visualizations monthlyavg(BigDecimal monthlyavg) {
+        setMonthlyavg(monthlyavg);
+        return this;
+    }
+
+    public Visualizations de08(BigDecimal de08) {
+        setDe08(de08);
+        return this;
+    }
+
+    public Visualizations de08_2(BigDecimal de08_2) {
+        setDe08_2(de08_2);
+        return this;
+    }
+
+    public Visualizations dss(BigDecimal dss) {
+        setDss(dss);
+        return this;
+    }
+
+    public Visualizations vostok(BigDecimal vostok) {
+        setVostok(vostok);
+        return this;
+    }
+
+    public Visualizations co2(BigDecimal co2) {
+        setCo2(co2);
+        return this;
+    }
+
+    public Visualizations temp(BigDecimal temp) {
+        setTemp(temp);
+        return this;
+    }
+
+    public Visualizations sector(String sector) {
+        setSector(sector);
+        return this;
+    }
+
+    public Visualizations sector_percent(BigDecimal sector_percent) {
+        setSector_percent(sector_percent);
+        return this;
+    }
+
+    public Visualizations sub_percent(BigDecimal sub_percent) {
+        setSub_percent(sub_percent);
+        return this;
+    }
+
+    public Visualizations sub_sector(String sub_sector) {
+        setSub_sector(sub_sector);
+        return this;
+    }
+
+    
 }

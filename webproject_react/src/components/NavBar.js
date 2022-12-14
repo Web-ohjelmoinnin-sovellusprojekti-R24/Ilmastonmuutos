@@ -1,34 +1,67 @@
 import React from 'react'
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+
+/*
 
 export default function NavBar() {
-  return (
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Expand at sm</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    return (
+        <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="create">Create new view</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample02">
+                    
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="default1">Tempature data and co2 concentrations and emission sources</a>
+                        </li>
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="default2">Emission sources</a>
+                        </li>
+                    </ul>
 
-    <div class="collapse navbar-collapse" id="navbarsExample03">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/views">Create new view <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown03">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  )
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="login">Login</a>
+                        </li>
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="myviews">MyViews</a>
+                        </li>
+                        <li class="nav-link active">
+                            <a class="nav-link active" aria-current="page" href="settings">Settings</a>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </nav>
+    )
 }
+
+*/
+
+export default function NavBar() {
+    return (
+        <Navbar expand="lg">
+            <Navbar.Brand>
+                <a href="createview" id="nav-dropdown">Create new view</a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className='nav-link'>
+                <Nav>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/default1">Temperature data, co2 concentrations and emission sources&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/default2">Emission sources&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown2" href="/login">Login</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/myviews">My views&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/settings">Settings&nbsp;&nbsp;</NavDropdown.Item>
+                    <NavDropdown.Item className='nav-link' id="nav-dropdown" href="/">Log out</NavDropdown.Item>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+
+    )
+
+}
+
+

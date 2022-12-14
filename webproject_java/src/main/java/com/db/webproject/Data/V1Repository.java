@@ -34,4 +34,7 @@ public interface V1Repository extends JpaRepository<Visualizations, Integer> {
    
     @Query(value="SELECT * FROM visualizations where time_type='V6'", nativeQuery = true)
     List<Visualizations> getV6Data();
+
+    @Query(value="SELECT * FROM visualizations where time_type='V9' OR time_type='V9SS'", nativeQuery = true)
+    List<Visualizations> getV9Data();
 }
