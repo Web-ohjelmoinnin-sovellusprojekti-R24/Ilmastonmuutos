@@ -19,7 +19,6 @@ import com.db.webproject.Service.UserViewsService;
 import com.db.webproject.Service.UsersService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
     @Autowired
@@ -28,13 +27,13 @@ public class UserController {
     @Autowired
     UserViewsService view;
 
-    @PostMapping("register")
+    @PostMapping("/register")
     public ResponseEntity<String> register(@RequestParam String username, @RequestParam String password){
         Users u = serv.register(username, password);
         return new ResponseEntity<>(u.getUsername(),HttpStatus.OK);
     }
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password){
 
         String token = serv.login(username, password);
@@ -44,7 +43,7 @@ public class UserController {
         return new ResponseEntity<>(token, HttpStatus.OK);
     }
 
-    @GetMapping("views")
+    @GetMapping("/views")
     public ResponseEntity<String> getViews(@RequestHeader("Authorization") String bearer){
         if(bearer.startsWith("Bearer")){
             String token = bearer.split(" ")[1];
@@ -61,7 +60,7 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PostMapping("createview")
+    @PostMapping("/createview")
         public ResponseEntity<String> createUser(@RequestParam int layout, @RequestParam boolean v1, @RequestParam boolean v3, @RequestParam boolean v5, @RequestParam boolean v6, @RequestParam boolean v7, @RequestParam boolean v9){
             view.create(layout, v1, v3, v5, v6, v7, v9);
             return new ResponseEntity<>(HttpStatus.OK);
